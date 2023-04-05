@@ -65,6 +65,9 @@ In the simplest possible form, interoperable messaging between two end users loo
 | Client 1 |<----->| Provider 1 |<----->| Provider 2 |<----->| Client 2 |
 |          |       |            |       |            |       |          |
 +----------+       +------------+       +------------+       +----------+
+     ^                                                             ^
+     |                              D                              |
+     +-------------------------------------------------------------+
 ~~~
 {: #fig-typical-arch title="Typical, simplified, architecture for interoperability"}
 
