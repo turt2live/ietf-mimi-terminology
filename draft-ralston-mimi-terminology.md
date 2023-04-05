@@ -51,6 +51,25 @@ to have a shared understanding for what is being discussed specifically.
 This document aims to neutrally describe each part of an interoperable instant messaging
 application. Note that some terminology comes from MIMI's use of MLS. [!I-D.ietf-mls-architecture]
 
+Documents within the MIMI working group may introduce their own terminology to explain
+concepts within their context. Those documents SHOULD NOT override or change the terminology
+described in this document.
+
+# Typical Architecture
+
+In the simplest possible form, interoperable messaging between two end users looks as such:
+
+~~~ aasvg
++----------+     +------------+     +------------+     +----------+
+|          |  A  |            |  B  |            |  C  |          |
+| Client 1 <-----> Provider 1 <-----> Provider 2 <-----> Client 2 |
+|          |     |            |     |            |     |          |
++----------+     +------------+     +------------+     +----------+
+~~~
+{: #fig-typical-arch title="Typical, simplified, architecture for interoperability"}
+
+
+
 # IANA Considerations
 
 This document has no IANA actions.
