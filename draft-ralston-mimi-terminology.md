@@ -48,7 +48,7 @@ specify the minimal set of mechanisms to make modern instant messaging applicati
 interoperable. Through prior discussions and upcoming documents, it's become important
 to have a shared understanding for what is being discussed specifically.
 
-This document expands upon MLS's [!I-D.ietf-mls-protocol] [!I-D.ietf-mls-architecture]
+This document expands upon MLS's {{!I-D.ietf-mls-protocol}} {{!I-D.ietf-mls-architecture}}
 terminology by defining terms specific to MIMI's purpose. Document authors SHOULD prefix
 terms from the MLS specification with "MLS" to denote that the term is specifically coming
 from the MLS specification. For example, "MLS Group" versus "Group". This document defines
