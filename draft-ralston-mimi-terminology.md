@@ -66,25 +66,25 @@ MIMI defines:
 them canonically within the system.
 
 **Client**: A user interface for messaging, performing encryption as needed. Presents
-*rooms* to the *user* to interact with. Synonymous with *MLS Client*. *Clients* have a
+*conversations* to the *user* to interact with. Synonymous with *MLS Client*. *Clients* have a
 **Client ID** to canonically identify them among a *user's* other *clients*.
 
-**Room**: The place where *users* communicate. Depending on design, this may be synonymous
-with an *MLS Group*. The default assumption if not clarified is that the *room* and *group*
-are different concepts/entities. *Rooms* have a **Room ID** to canonically identify them
+**Conversation**: The place where *users* communicate. Depending on design, this may be synonymous
+with an *MLS Group*. The default assumption if not clarified is that the *conversation* and *group*
+are different concepts/entities. *Conversations* have a **Conversation ID** to canonically identify them
 within the system, which may be a **Group ID** if the concepts are synonymous.
 
-**Room Member**: A *user's* membership in relation to a *room*. If the concepts of *room* and
-*MLS Group* are synonymous, this will be no different than an *MLS Member*, however if different
-then this will be which represents the *MLS Member* to the *room*.
+**Conversation Member**: A *user's* membership in relation to a *conversation*. If the concepts
+of *conversation* and *MLS Group* are synonymous, this will be no different than an *MLS Member*,
+however if different then this will be which represents the *MLS Member* to the *conversation*.
 
 **Event**: The container for an encrypted *MLS Message*, sent over the wire between *servers*
 and *clients* (through their local *servers*). *Events* have an **Event ID** to canonically
-identify them at least within the *room*.
+identify them at least within the *conversation*.
 
-**Room Property**: Information stored in the *room*, such as the name, topic, avatar,
-*room membership*, etc. This may be in the shape of an *event*. Note that *room properties* are
-different from what is needed to construct an *MLS Group Context*.
+**Conversation Property**: Information stored in the *conversation*, such as the name, topic, avatar,
+*conversation membership*, etc. This may be in the shape of an *event*. Note that *conversation properties*
+are different from what is needed to construct an *MLS Group Context*.
 
 **Message**: Synonymous with an *MLS Message*. *Messages* have a **Message ID** to canonically
 identify them at least within the *group*.
@@ -106,8 +106,8 @@ documents should clarify which API surface they are defining a *transport* for (
 Transport", for example).
 
 **Access Control**: The set of algorithms which determine whether an *event* or *MLS Message*
-is permitted in the *room*/*group*. For instance, this may define whether an *MLS Proposal*
-is accepted or whether the *user* is able to become a *room member*.
+is permitted in the *conversation*/*group*. For instance, this may define whether an *MLS Proposal*
+is accepted or whether the *user* is able to become a *conversation member*.
 
 **Message Format**: The specific format that *clients* use within the encrypted body of an
 *MLS Message*. Sometimes this will also be called the **Content Format**.
