@@ -60,11 +60,11 @@ described in this document.
 In the simplest possible form, interoperable messaging between two end users looks as such:
 
 ~~~ aasvg
-+----------+     +------------+     +------------+     +----------+
-|          |  A  |            |  B  |            |  C  |          |
-| Client 1 <-----> Provider 1 <-----> Provider 2 <-----> Client 2 |
-|          |     |            |     |            |     |          |
-+----------+     +------------+     +------------+     +----------+
++----------+       +------------+       +------------+       +----------+
+|          |   A   |            |   B   |            |   C   |          |
+| Client 1 |<----->| Provider 1 |<----->| Provider 2 |<----->| Client 2 |
+|          |       |            |       |            |       |          |
++----------+       +------------+       +------------+       +----------+
 ~~~
 {: #fig-typical-arch title="Typical, simplified, architecture for interoperability"}
 
