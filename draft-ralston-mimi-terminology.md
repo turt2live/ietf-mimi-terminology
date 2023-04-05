@@ -82,7 +82,7 @@ then this will be which represents the *MLS Member* to the *room*.
 and *clients* (through their local *servers*). *Events* have an **Event ID** to canonically
 identify them at least within the *room*.
 
-**Messge**: Synonymous with an *MLS Message*. *Messages* have a **Message ID** to canonically
+**Message**: Synonymous with an *MLS Message*. *Messages* have a **Message ID** to canonically
 identify them at least within the *group*.
 
 **Server**: Synonymous with an *MLS Delivery Service (DS)*. Responsible for routing *events*
