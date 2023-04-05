@@ -82,6 +82,10 @@ then this will be which represents the *MLS Member* to the *room*.
 and *clients* (through their local *servers*). *Events* have an **Event ID** to canonically
 identify them at least within the *room*.
 
+**Room Property**: Information stored in the *room*, such as the name, topic, avatar,
+*room membership*, etc. This may be in the shape of an *event*. Note that *room properties* are
+different from what is needed to construct an *MLS Group Context*.
+
 **Message**: Synonymous with an *MLS Message*. *Messages* have a **Message ID** to canonically
 identify them at least within the *group*.
 
