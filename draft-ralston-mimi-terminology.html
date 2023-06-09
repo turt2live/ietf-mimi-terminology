@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en" class="Internet-Draft">
+<head>
+<meta charset="utf-8">
+<meta content="Common,Latin" name="scripts">
+<meta content="initial-scale=1.0" name="viewport">
+<title>MIMI Terminology</title>
+<meta content="Travis Ralston" name="author">
+<meta content="
+       This document introduces a set of terminology to use when discussing or describing
+concepts within MIMI. 
+    " name="description">
+<meta content="xml2rfc 3.17.3" name="generator">
+<meta content="mimi terminology" name="keyword">
+<meta content="mimi definitions" name="keyword">
+<meta content="mimi words" name="keyword">
+<meta content="draft-ralston-mimi-terminology-latest" name="ietf.draft">
+<!-- Generator version information:
+  xml2rfc 3.17.3
+    Python 3.11.3
+    appdirs 1.4.4
+    ConfigArgParse 1.5.3
+    google-i18n-address 3.0.0
+    intervaltree 3.1.0
+    Jinja2 3.1.2
+    lxml 4.9.2
+    pycountry 22.3.5
+    PyYAML 6.0
+    requests 2.31.0
+    setuptools 67.7.2
+    six 1.16.0
+    wcwidth 0.2.6
+-->
+<link href="draft-ralston-mimi-terminology.xml" rel="alternate" type="application/rfc+xml">
+<link href="#copyright" rel="license">
+<style type="text/css">@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Italic'), local('Lora-Italic'), url('https://martinthomson.github.io/rfc-css/fonts/lora-italic-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Italic'), local('Lora-Italic'), url('https://martinthomson.github.io/rfc-css/fonts/lora-italic-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Italic'), local('Lora-Italic'), url('https://martinthomson.github.io/rfc-css/fonts/lora-italic-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Italic'), local('Lora-Italic'), url('https://martinthomson.github.io/rfc-css/fonts/lora-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Italic'), local('Lora-Italic'), url('https://martinthomson.github.io/rfc-css/fonts/lora-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Regular'), local('Lora-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/lora-regular-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Regular'), local('Lora-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/lora-regular-cyrillic.woff2') format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Regular'), local('Lora-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/lora-regular-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Regular'), local('Lora-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/lora-regular-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Regular'), local('Lora-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/lora-regular-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Lora Bold'), local('Lora-Bold'), url('https://martinthomson.github.io/rfc-css/fonts/lora-bold-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Lora Bold'), local('Lora-Bold'), url('https://martinthomson.github.io/rfc-css/fonts/lora-bold-cyrillic.woff2') format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Lora Bold'), local('Lora-Bold'), url('https://martinthomson.github.io/rfc-css/fonts/lora-bold-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Lora Bold'), local('Lora-Bold'), url('https://martinthomson.github.io/rfc-css/fonts/lora-bold-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Lora Bold'), local('Lora-Bold'), url('https://martinthomson.github.io/rfc-css/fonts/lora-bold-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Lora SemiBold'), local('Lora-SemiBold'), url('https://martinthomson.github.io/rfc-css/fonts/lora-semibold-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Cabin Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Cabin Condensed SemiBold'), local('CabinCondensed-SemiBold'), url('https://martinthomson.github.io/rfc-css/fonts/cabincondensed-semibold-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Cabin Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Cabin Condensed SemiBold'), local('CabinCondensed-SemiBold'), url('https://martinthomson.github.io/rfc-css/fonts/cabincondensed-semibold-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Cabin Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Cabin Condensed SemiBold'), local('CabinCondensed-SemiBold'), url('https://martinthomson.github.io/rfc-css/fonts/cabincondensed-semibold-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Oxygen Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Oxygen Mono'), local('OxygenMono-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/oxygenmono-regular-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Oxygen Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Oxygen Mono'), local('OxygenMono-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/oxygenmono-regular-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  color-scheme: light dark;
+  --background-color: #fff;
+  --text-color: #222;
+  --title-color: #191919;
+  --link-color: #2a6496;
+  --highlight-color: #f9f9f9;
+  --line-color: #eee;
+  --pilcrow-weak: #ddd;
+  --pilcrow-strong: #bbb;
+  --small-font-size: 14.5px;
+  --font-mono: 'Oxygen Mono', monospace;
+  scrollbar-color: #bbb #eee;
+}
+body {
+  max-width: 600px;
+  margin: 75px auto;
+  padding: 0 5px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font: 16px/22px "Lora", serif;
+  scroll-behavior: smooth;
+}
+
+.ears {
+  display: none;
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cabin Condensed", sans-serif;
+  font-weight: 600;
+  margin: 0.8em 0 0.3em;
+  font-size-adjust: 0.5;
+  color: var(--title-color);
+}
+h1#title {
+  font-size: 32px;
+  line-height: 40px;
+  clear: both;
+}
+h1#title, h1#rfcnum {
+  margin: 1.5em 0 0.2em;
+}
+h1#rfcnum + h1#title {
+  margin: 0.2em 0;
+}
+
+h1, h2, h3 {
+  font-size: 22px;
+  line-height: 27px;
+}
+h4, h5, h6 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+/* general structure */
+.author {
+  padding-bottom: 0.3em;
+}
+#abstract+p {
+  font-size: 18px;
+  line-height: 24px;
+}
+#abstract+p code, #abstract+p samp, #abstract+p tt {
+  font-size: 16px;
+  line-height: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0.5em 0;
+  text-align: left;
+}
+div {
+  margin: 0;
+}
+.alignRight.art-text {
+  background-color: var(--highlight-color);
+  border: 1px solid var(--line-color);
+  border-radius: 3px;
+  padding: 0.5em 1em 0;
+  margin-bottom: 0.5em;
+}
+.alignRight.art-text pre {
+  padding: 0;
+  width: auto;
+}
+.alignRight {
+  margin: 1em 0;
+}
+.alignRight > *:first-child {
+  border: none;
+  margin: 0;
+  float: right;
+  clear: both;
+}
+.alignRight > *:nth-child(2) {
+  clear: both;
+  display: block;
+  border: none;
+}
+svg {
+  display: block;
+}
+/* font-family isn't space-separated, but =~ will have to do */
+svg[font-family~="monospace" i], svg [font-family~="monospace" i] {
+  font-family: var(--font-mono);
+}
+.alignCenter.art-text {
+  background-color: var(--highlight-color);
+  border: 1px solid var(--line-color);
+  border-radius: 3px;
+  padding: 0.5em 1em 0;
+  margin-bottom: 0.5em;
+}
+.alignCenter.art-text pre {
+  padding: 0;
+  width: auto;
+}
+.alignCenter {
+  margin: 1em 0;
+}
+.alignCenter > *:first-child {
+  border: none;
+  /* this isn't optimal, but it's an existence proof.  PrinceXML doesn't
+     support flexbox yet.
+  */
+  display: table;
+  margin: 0 auto;
+}
+
+/* lists */
+ol, ul {
+  padding: 0;
+  margin: 0 0 0.5em 2em;
+}
+:is(ol, ul) :is(ol, ul) {
+  margin-left: 1em;
+}
+li {
+  margin: 0 0 0.25em 0;
+}
+.ulCompact li {
+  margin: 0;
+}
+ul.empty, .ulEmpty {
+  list-style-type: none;
+}
+ul.empty li, .ulEmpty li {
+  margin-top: 0.5em;
+}
+:is(ul, ol).compact, .ulCompact, .olCompact {
+  line-height: 1;
+  margin: 0 0 0 2em;
+}
+
+/* definition lists */
+dl {
+  clear: left;
+  --indent: 3ch;
+  /* --indent: attr(indent ch); not supported in any browser, but we can dream */
+}
+dl.olPercent {
+  --indent: 5ch;
+}
+dl > dt {
+  float: left;
+  margin-right: 2ch;
+  min-width: 8ch;
+}
+dl.dlNewline > dt {
+  float: none;
+}
+dl > dd {
+  margin-bottom: .8em;
+  margin-left: var(--indent) !important; /* stupid element overrides */
+  min-height: 2ex;
+}
+dl.olPercent > dt {
+  min-width: calc(var(--indent) - 2ch);
+}
+:is(dl.compact, .dlCompact) > dd {
+  margin-bottom: 0;
+}
+:is(dl.compact, .dlCompact) > dd > :is(:first-child, .break:first-child + *) {
+  margin-top: 0;
+}
+:is(dl.compact, .dlCompact) > dd > :is(:last-child) {
+  margin-bottom: 0;
+}
+dl > dd > dl {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+:is(dd, span).break {
+  display: none;
+}
+
+/* links */
+a, a[href].selfRef:hover {
+  text-decoration: none;
+}
+a[href] {
+  color: var(--link-color);
+}
+a[href].selfRef, .iref + a[href].internal {
+  color: var(--text-color);
+}
+a[href]:hover {
+  text-decoration: underline;
+}
+a[href].selfRef:hover {
+  background-color: var(--highlight-color);
+}
+a.xref:is(.cite, .auto), :is(#status-of-memo, #copyright) a {
+  white-space: nowrap;
+}
+
+/* Figures */
+tt, code, pre {
+  background-color: var(--highlight-color);
+  font: 14px/22px var(--font-mono);
+}
+tt, code {
+  /* changing the font for inline elements leads to different ascender
+     and descender heights; as we want to retain baseline alignment,
+     remove leading to avoid altering the final height of lines
+     note: this fails if these blocks take an entire line,
+     a different solution would be great */
+  line-height: 0;
+}
+:is(h1, h2, h3, h4, h5, h6) :is(tt, code) {
+  font-size: 84%;
+}
+pre {
+  border: 1px solid var(--line-color);
+  font-size: 13.5px;
+  line-height: 16px;
+  letter-spacing: -0.2px;
+  margin: 5px;
+  padding: 5px;
+}
+img {
+  max-width: 100%;
+}
+figure {
+  margin: 0.5em 0;
+  padding: 0;
+}
+figure blockquote {
+  margin: 0.8em 0.4em 0.4em;
+}
+figcaption, caption {
+  font-style: italic;
+  margin: 0.5em 1.5em;
+  text-align: left;
+}
+@media screen {
+  /* Auto-collapse boilerplate. */
+  :is(#status-of-memo, #copyright) p {
+    margin: -2px 0;
+    max-height: 0;
+    transition: max-height 2s ease, margin 0.5s ease 0.5s;
+    overflow: hidden;
+  }
+  :is(#status-of-memo, #copyright):hover p,
+  :is(#status-of-memo, #copyright) h2:target ~ p {
+    margin: 0.5em 0;
+    max-height: 500px;
+    overflow: auto;
+  }
+  pre, svg {
+    display: inline-block;
+    overflow-x: auto;
+  }
+  pre {
+    max-width: 100%;
+    width: calc(100% - 22px - 1em);
+  }
+  svg {
+    max-width: calc(100% - 22px - 1em);
+  }
+  figure pre {
+    display: block;
+    width: calc(100% - 25px);
+  }
+  :is(pre, svg) + .pilcrow {
+    display: inline-block;
+    vertical-align: text-bottom;
+    padding-bottom: 8px;
+  }
+}
+
+/* aside, blockquote */
+aside, blockquote {
+  margin-left: 0;
+  padding: 0 2em;
+  font-style: italic;
+}
+blockquote {
+  margin: 1em 0;
+}
+cite {
+  display: block;
+  text-align: right;
+  font-style: italic;
+}
+
+/* tables */
+table {
+  max-width: 100%;
+  margin: 0 0 1em;
+  border-collapse: collapse;
+}
+table.right {
+  margin-left: auto;
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+table.left {
+  margin-right: auto;
+}
+thead, tbody {
+  border: 1px solid var(--line-color);
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 5px 10px;
+}
+th {
+  background-color: var(--line-color);
+}
+:is(tr:nth-child(2n), thead+tbody > tr:nth-child(2n+1)) > td {
+  background-color: var(--background-color);
+}
+:is(tr:nth-child(2n+1), thead+tbody > tr:nth-child(2n)) > td {
+  background-color: var(--highlight-color);
+}
+table caption {
+  margin: 0;
+  padding: 3px 0 3px 1em;
+}
+table p {
+  margin: 0;
+}
+
+/* pilcrow */
+a.pilcrow {
+  margin-left: 3px;
+  opacity: 0.2;
+  user-select: none;
+}
+a.pilcrow[href] { color: var(--pilcrow-weak); }
+a.pilcrow[href]:hover { text-decoration: none; }
+@media not print {
+  :hover > a.pilcrow {
+    opacity: 1;
+  }
+  a.pilcrow[href]:hover {
+    color: var(--pilcrow-strong);
+    background-color: transparent;
+  }
+}
+@media print {
+  a.pilcrow {
+    display: none;
+  }
+}
+
+/* misc */
+hr {
+  border: 0;
+  border-top: 1px solid var(--line-color);
+}
+.bcp14 {
+  font-variant: small-caps;
+  font-weight: 600;
+  font-size: var(--small-font-size);
+}
+.role {
+  font-variant: all-small-caps;
+}
+sub, sup {
+  line-height: 1;
+  font-size: 80%;
+}
+
+/* info block */
+#identifiers {
+  margin: 0;
+  font-size: var(--small-font-size);
+  line-height: 18px;
+  --identifier-width: 15ch;
+}
+#identifiers dt {
+  width: var(--identifier-width);
+  min-width: var(--identifier-width);
+  clear: left;
+  float: left;
+  text-align: right;
+  margin-right: 1ch;
+}
+#identifiers dd {
+  margin: 0;
+  margin-left: calc(1em + var(--identifier-width)) !important;
+  min-width: 5em;
+}
+#identifiers .authors .author {
+  display: inline-block;
+  margin-right: 1.5em;
+}
+#identifiers .authors .org {
+  font-style: italic;
+}
+
+/* The prepared/rendered info at the very bottom of the page */
+.docInfo {
+  color: #999;
+  font-size: 0.9em;
+  font-style: italic;
+  margin-top: 2em;
+}
+.docInfo .prepared {
+  float: left;
+}
+.docInfo .prepared {
+  float: right;
+}
+
+/* table of contents */
+#toc {
+  padding: 0.75em 0 2em 0;
+  margin-bottom: 1em;
+}
+#toc nav ul {
+  margin: 0 0.5em 0 0;
+  padding: 0;
+  list-style: none;
+}
+#toc nav li {
+  line-height: 1.3em;
+  margin: 0.75em 0;
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+}
+#toc a.xref {
+  white-space: normal;
+}
+/* references */
+.references dt {
+  text-align: right;
+  font-weight: bold;
+  min-width: 10ch;
+  margin-right: 1.5ch;
+}
+.references dt:target::before {
+  content: "⇒";
+  width: 15px;
+  margin: 0 10px 0 -25px;
+}
+.references dd {
+  margin-left: 12ch !important;
+  overflow: auto;
+}
+
+.refInstance {
+  margin-bottom: 1.25em;
+}
+
+.references .ascii {
+  margin-bottom: 0.25em;
+}
+
+/* index */
+#rfc\.index\.index + ul {
+  margin-left: 0;
+}
+
+/* authors */
+address.vcard {
+  font-style: normal;
+  margin: 1em 0;
+}
+address.vcard .nameRole {
+  font-weight: 700;
+  margin-left: 0;
+}
+address.vcard .label {
+  margin: 0.5em 0;
+}
+address.vcard .type {
+  display: none;
+}
+.alternative-contact {
+  margin: 1.5em 0 1em;
+}
+hr.addr {
+  border-top: 1px dashed;
+  margin: 0;
+  color: #ddd;
+  max-width: calc(100% - 16px);
+}
+@media (min-width: 500px) {
+  #authors-addresses > section {
+    column-count: 2;
+    column-gap: 20px;
+  }
+  #authors-addresses > section > h2 {
+    column-span: all;
+  }
+  /* hack for break-inside: avoid-column */
+  #authors-addresses address {
+    display: inline-block;
+    break-inside: avoid-column;
+  }
+}
+
+.rfcEditorRemove p:first-of-type {
+  font-style: italic;
+}
+.cref {
+  background-color: rgba(249, 232, 105, 0.3);
+  padding: 2px 4px;
+}
+.crefSource {
+  font-style: italic;
+}
+/* alternative layout for smaller screens */
+@media screen and (max-width: 929px) {
+  #toc {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+    opacity: 0.6;
+  }
+  #toc.active {
+      opacity: 1;
+  }
+  #toc h2 {
+    margin: 0;
+    padding: 2px 0 2px 6px;
+    padding-right: 1em;
+    font-size: 18px;
+    line-height: 24px;
+    min-width: 190px;
+    text-align: right;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+  }
+  #toc h2::before { /* css hamburger */
+    float: right;
+    position: relative;
+    width: 1em;
+    height: 1px;
+    left: -164px;
+    margin: 8px 0 0 0;
+    background: white none repeat scroll 0 0;
+    box-shadow: 0 4px 0 0 white, 0 8px 0 0 white;
+    content: "";
+  }
+  #toc nav {
+    display: none;
+    background-color: var(--background-color);
+    padding: 0.5em 1em 1em;
+    overflow: auto;
+    overscroll-behavior: contain;
+    height: calc(100vh - 48px);
+    border-left: 1px solid #ddd;
+  }
+  #toc.active nav {
+    display: block;
+  }
+  /* Make the collapsed ToC header render white on gray also when it's a link */
+  #toc h2 a,
+  #toc h2 a:link,
+  #toc h2 a:focus,
+  #toc h2 a:hover,
+  #toc a.toplink,
+  #toc a.toplink:hover {
+    color: white;
+    background-color: #444;
+    text-decoration: none;
+  }
+  #toc a.toplink {
+    margin-top: 2px;
+  }
+}
+
+/* alternative layout for wide screens */
+@media screen and (min-width: 930px) {
+  body {
+    padding-right: 360px;
+    padding-right: calc(min(180px + 20%, 500px));
+  }
+  #toc {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    right: calc(50vw - 480px);
+    width: 312px;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+  }
+  #toc h2 {
+    margin: 0;
+    padding: 0.25em 1em 1em 0;
+  }
+  #toc nav {
+    display: block;
+    height: calc(90vh - 84px);
+    bottom: 0;
+    padding: 0.5em 0 2em;
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+  #toc nav > ul  {
+    margin-bottom: 2em;
+  }
+  #toc ul {
+    margin: 0 0 0 4px;
+    font-size: var(--small-font-size);
+  }
+  #toc ul :is(p, li) {
+    margin: 2px 0;
+    line-height: 22px;
+  }
+  img { /* future proofing */
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* pagination */
+@media print {
+  body {
+    width: 100%;
+  }
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  #n-copyright-notice {
+    border-bottom: none;
+  }
+  #toc, #n-introduction {
+    page-break-before: always;
+  }
+  #toc {
+    border-top: none;
+    padding-top: 0;
+  }
+  figure, pre {
+    page-break-inside: avoid;
+  }
+  figure {
+    overflow: scroll;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  h2+*, h3+*, h4+*, h5+*, h6+* {
+    page-break-before: avoid;
+  }
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 10pt;
+  }
+  table {
+    border: 1px solid #ddd;
+  }
+  td {
+    border-top: 1px solid #ddd;
+  }
+}
+
+@page :first {
+  padding-top: 0;
+  @top-left {
+    content: normal;
+    border: none;
+  }
+  @top-center {
+    content: normal;
+    border: none;
+  }
+  @top-right {
+    content: normal;
+    border: none;
+  }
+}
+
+@page {
+  size: A4;
+  margin-bottom: 45mm;
+  padding-top: 20px;
+}
+
+/* Changes introduced to fix issues found during implementation */
+
+/* Separate body from document info even without intervening H1 */
+section {
+  clear: both;
+}
+
+/* Top align author divs, to avoid names without organization dropping level with org names */
+.author {
+  vertical-align: top;
+}
+
+/* Style section numbers with more space between number and title */
+.section-number {
+  padding-right: 0.5em;
+}
+
+/* Add styling for a link in the ToC that points to the top of the document */
+a.toplink {
+  float: right;
+  margin: 8px 0.5em 0;
+}
+
+/* Provide styling for table cell text alignment */
+table .text-left {
+  text-align: left;
+}
+table .text-center {
+  text-align: center;
+}
+table .text-right {
+  text-align: right;
+}
+
+/* Make the alternative author contact information look less like just another
+   author, and group it closer with the primary author contact information */
+.alternative-contact {
+  margin: 0.5em 0 0.25em 0;
+}
+address .non-ascii {
+  margin: 0 0 0 2em;
+}
+
+/* With it being possible to set tables with alignment
+  left, center, and right, { width: 100%; } does not make sense */
+table {
+  width: auto;
+}
+
+/* Avoid reference text that sits in a block with very wide left margin,
+   because of a long floating dt label.*/
+.references dd {
+  overflow: visible;
+}
+
+/* Control caption placement */
+caption {
+  caption-side: bottom;
+}
+
+/* Limit the width of the author address vcard, so names in right-to-left
+   script don't end up on the other side of the page. */
+
+address.vcard {
+  max-width: 20em;
+  margin-right: auto;
+}
+
+/* For address alignment dependent on LTR or RTL scripts */
+address div.left {
+  text-align: left;
+}
+address div.right {
+  text-align: right;
+}
+
+/* Give the table caption label the same styling as the figcaption */
+
+@media print {
+  .toplink {
+    display: none;
+  }
+
+  /* avoid overwriting the top border line with the ToC header */
+  #toc {
+    padding-top: 1px;
+  }
+
+  /* Avoid page breaks inside dl and author address entries */
+  dd {
+    page-break-before: avoid;
+  }
+  .vcard {
+    page-break-inside: avoid;
+  }
+
+}
+
+/* Dark mode. */
+@media (prefers-color-scheme: dark) {
+:root {
+  --background-color: #121212;
+  --text-color: #f0f0f0;
+  --title-color: #fff;
+  --link-color: #4da4f0;
+  --highlight-color: #282828;
+  --line-color: #444;
+  --pilcrow-weak: #444;
+  --pilcrow-strong: #666;
+  scrollbar-color: #777 #333;
+}
+}
+
+/* SVG Trick: a prefix match works because only black and white are allowed */
+svg :is([stroke="black"], [stroke^="#000"]) {
+  stroke: var(--text-color);
+}
+svg :is([stroke="white"], [stroke^="#fff"]) {
+  stroke: var(--background-color);
+}
+svg :is([fill="black"], [fill^="#000"], :not([fill])) {
+  fill: var(--text-color);
+}
+svg :is([fill="white"], [fill^="#fff"]) {
+  fill: var(--background-color);
+}
+</style>
+
+</head>
+<body class="xml2rfc">
+<table class="ears">
+<thead><tr>
+<td class="left">Internet-Draft</td>
+<td class="center">MIMI Terminology</td>
+<td class="right">June 2023</td>
+</tr></thead>
+<tfoot><tr>
+<td class="left">Ralston</td>
+<td class="center">Expires 11 December 2023</td>
+<td class="right">[Page]</td>
+</tr></tfoot>
+</table>
+<div id="external-metadata" class="document-information"></div>
+<div id="internal-metadata" class="document-information">
+<dl id="identifiers">
+<dt class="label-workgroup">Workgroup:</dt>
+<dd class="workgroup">More Instant Messaging Interoperability</dd>
+<dt class="label-internet-draft">Internet-Draft:</dt>
+<dd class="internet-draft">draft-ralston-mimi-terminology-latest</dd>
+<dt class="label-published">Published:</dt>
+<dd class="published">
+<time datetime="2023-06-09" class="published">9 June 2023</time>
+    </dd>
+<dt class="label-intended-status">Intended Status:</dt>
+<dd class="intended-status">Informational</dd>
+<dt class="label-expires">Expires:</dt>
+<dd class="expires"><time datetime="2023-12-11">11 December 2023</time></dd>
+<dt class="label-authors">Author:</dt>
+<dd class="authors">
+<div class="author">
+      <div class="author-name">T. Ralston</div>
+<div class="org">The Matrix.org Foundation C.I.C.</div>
+</div>
+</dd>
+</dl>
+</div>
+<h1 id="title">MIMI Terminology</h1>
+<section id="section-abstract">
+      <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
+<p id="section-abstract-1">This document introduces a set of terminology to use when discussing or describing
+concepts within MIMI.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+</section>
+<section class="note rfcEditorRemove" id="section-note.1">
+      <h2 id="name-about-this-document">
+<a href="#name-about-this-document" class="section-name selfRef">About This Document</a>
+      </h2>
+<p id="section-note.1-1">This note is to be removed before publishing as an RFC.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
+<p id="section-note.1-2">
+        The latest revision of this draft can be found at <span><a href="https://turt2live.github.io/ietf-mimi-terminology/draft-ralston-mimi-terminology.html">https://turt2live.github.io/ietf-mimi-terminology/draft-ralston-mimi-terminology.html</a></span>.
+        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-ralston-mimi-terminology/">https://datatracker.ietf.org/doc/draft-ralston-mimi-terminology/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
+<p id="section-note.1-3">
+        Discussion of this document takes place on the
+        More Instant Messaging Interoperability Working Group mailing list (<span><a href="mailto:mimi@ietf.org">mailto:mimi@ietf.org</a></span>),
+        which is archived at <span><a href="https://mailarchive.ietf.org/arch/browse/mimi/">https://mailarchive.ietf.org/arch/browse/mimi/</a></span>.
+        Subscribe at <span><a href="https://www.ietf.org/mailman/listinfo/mimi/">https://www.ietf.org/mailman/listinfo/mimi/</a></span>.<a href="#section-note.1-3" class="pilcrow">¶</a></p>
+<p id="section-note.1-4">Source for this draft and an issue tracker can be found at
+        <span><a href="https://github.com/turt2live/ietf-mimi-terminology">https://github.com/turt2live/ietf-mimi-terminology</a></span>.<a href="#section-note.1-4" class="pilcrow">¶</a></p>
+</section>
+<div id="status-of-memo">
+<section id="section-boilerplate.1">
+        <h2 id="name-status-of-this-memo">
+<a href="#name-status-of-this-memo" class="section-name selfRef">Status of This Memo</a>
+        </h2>
+<p id="section-boilerplate.1-1">
+        This Internet-Draft is submitted in full conformance with the
+        provisions of BCP 78 and BCP 79.<a href="#section-boilerplate.1-1" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.1-2">
+        Internet-Drafts are working documents of the Internet Engineering Task
+        Force (IETF). Note that other groups may also distribute working
+        documents as Internet-Drafts. The list of current Internet-Drafts is
+        at <span><a href="https://datatracker.ietf.org/drafts/current/">https://datatracker.ietf.org/drafts/current/</a></span>.<a href="#section-boilerplate.1-2" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.1-3">
+        Internet-Drafts are draft documents valid for a maximum of six months
+        and may be updated, replaced, or obsoleted by other documents at any
+        time. It is inappropriate to use Internet-Drafts as reference
+        material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.1-4">
+        This Internet-Draft will expire on 11 December 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="copyright">
+<section id="section-boilerplate.2">
+        <h2 id="name-copyright-notice">
+<a href="#name-copyright-notice" class="section-name selfRef">Copyright Notice</a>
+        </h2>
+<p id="section-boilerplate.2-1">
+            Copyright (c) 2023 IETF Trust and the persons identified as the
+            document authors. All rights reserved.<a href="#section-boilerplate.2-1" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.2-2">
+            This document is subject to BCP 78 and the IETF Trust's Legal
+            Provisions Relating to IETF Documents
+            (<span><a href="https://trustee.ietf.org/license-info">https://trustee.ietf.org/license-info</a></span>) in effect on the date of
+            publication of this document. Please review these documents
+            carefully, as they describe your rights and restrictions with
+            respect to this document. Code Components extracted from this
+            document must include Revised BSD License text as described in
+            Section 4.e of the Trust Legal Provisions and are provided without
+            warranty as described in the Revised BSD License.<a href="#section-boilerplate.2-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="toc">
+<section id="section-toc.1">
+        <a href="#" onclick="scroll(0,0)" class="toplink">▲</a><h2 id="name-table-of-contents">
+<a href="#name-table-of-contents" class="section-name selfRef">Table of Contents</a>
+        </h2>
+<nav class="toc"><ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1">
+            <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-introduction" class="internal xref">Introduction</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2">
+            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-terminology" class="internal xref">Terminology</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.1">
+                <p id="section-toc.1-1.2.2.1.1" class="keepWithNext"><a href="#section-2.1" class="auto internal xref">2.1</a>.  <a href="#name-diagram-reference" class="internal xref">Diagram Reference</a></p>
+</li>
+            </ul>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
+            <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
+            <p id="section-toc.1-1.5.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
+</li>
+        </ul>
+</nav>
+</section>
+</div>
+<div id="introduction">
+<section id="section-1">
+      <h2 id="name-introduction">
+<a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
+      </h2>
+<p id="section-1-1">The More Instant Messaging Interoperability (MIMI) working group is chartered to
+specify the minimal set of mechanisms to make modern instant messaging applications
+interoperable. Through prior discussions and upcoming documents, it's become important
+to have a shared understanding for what is being discussed specifically.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">This document expands upon MLS's <span>[<a href="#I-D.ietf-mls-protocol" class="cite xref">I-D.ietf-mls-protocol</a>]</span> <span>[<a href="#I-D.ietf-mls-architecture" class="cite xref">I-D.ietf-mls-architecture</a>]</span>
+terminology by defining terms specific to MIMI's purpose. Document authors SHOULD prefix
+terms from the MLS specification with "MLS" to denote that the term is specifically coming
+from the MLS specification. For example, "MLS Group" versus "Group". This document defines
+terms which are non-conflicting to help ensure clarity when the MLS prefix is missing, however.<a href="#section-1-2" class="pilcrow">¶</a></p>
+<p id="section-1-3">Documents within the MIMI working group may introduce their own terminology to explain
+concepts within their context. Those documents SHOULD NOT override or change the terminology
+described in this document or from MLS.<a href="#section-1-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="terminology">
+<section id="section-2">
+      <h2 id="name-terminology">
+<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-terminology" class="section-name selfRef">Terminology</a>
+      </h2>
+<p id="section-2-1">MIMI defines:<a href="#section-2-1" class="pilcrow">¶</a></p>
+<p id="section-2-2"><strong>Messaging Provider</strong> or <strong>Provider</strong>: A service offering instant messaging to <em>users</em>.
+Typically a <em>provider</em> will have a <em>server</em> to route <em>events</em> between <em>users</em> (or <em>clients</em>,
+specifically).<a href="#section-2-2" class="pilcrow">¶</a></p>
+<p id="section-2-3"><strong>User</strong>: A (normally) human operator of a <em>client</em>. <em>Users</em> have a <strong>User ID</strong> to identify
+them canonically within the system.<a href="#section-2-3" class="pilcrow">¶</a></p>
+<p id="section-2-4"><strong>User Identity</strong>: A mapping of <strong>User ID</strong> to external identifier, such as a phone number.
+In some cases, the <em>user identity</em> can be synonymous with the <em>user ID</em>, however the default
+assumption if not clarified is that they are different concepts.<a href="#section-2-4" class="pilcrow">¶</a></p>
+<p id="section-2-5"><strong>Client</strong>: A user interface for messaging, performing encryption as needed. Presents
+<em>chats</em> to the <em>user</em> to interact with. Synonymous with <em>MLS Client</em>. <em>Clients</em> have a
+<strong>Client ID</strong> to canonically identify them among a <em>user's</em> other <em>clients</em>. <em>Clients</em>
+can additionally be called <strong>Devices</strong> to differentiate them from a named application.<a href="#section-2-5" class="pilcrow">¶</a></p>
+<p id="section-2-6"><strong>Chat</strong>: The place where <em>users</em> communicate. This is semantically distinct from an
+<em>MLS Group</em>: an <em>MLS Group</em> is responsible for handling <em>client</em> keys while a <em>chat</em> is
+simply the user-facing construct for communication, however systems can declare a <em>chat</em>
+to be the same as an <em>MLS Group</em> depending on their design. <em>Chats</em> have a <strong>Chat ID</strong> to
+canonically identify them within the system. <em>Chats</em> can additionally be called <strong>Rooms</strong>,
+<strong>Conversations</strong>, and <strong>Channels</strong>.<a href="#section-2-6" class="pilcrow">¶</a></p>
+<p id="section-2-7">A <em>chat</em> can have any one of many different characterizations/behaviours, called <strong>Chat Types</strong>:<a href="#section-2-7" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-2-8.1">
+          <strong>DM</strong>: A <em>direct message</em> <em>chat</em> between exactly two <em>users</em>. <em>DMs</em> are typically created
+when a <em>user</em> searches for another <em>user</em> to message, rather than creating a <em>group chat</em>.
+All <em>users</em> in the <em>chat</em> have the same permission capabilities under the <em>access control</em>
+semantics. The <em>chat name</em> is that of the opponent <em>user</em> in the <em>DM</em>. <em>DMs</em> are typically
+canonical: exactly one <em>chat</em> with the opponent exists at a time.<a href="#section-2-8.1" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-2-8.2">
+          <strong>Group DM</strong>: A subtype of <em>DMs</em> where there are more than two <em>users</em>. The <em>chat name</em>
+consists of the opponent <em>users</em> in the <em>DM</em>. Inherited from <em>DMs</em>, <em>Group DMs</em> are also
+canonical: creating a new <em>Group DM</em> with the exact same <em>users</em> ultimately redirects to
+the existing <em>chat</em> instead of creating a new one. These may also be called <strong>Ad-hoc Chats</strong>
+in some scenarios.<a href="#section-2-8.2" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-2-8.3">
+          <strong>Group Chat</strong>: A <em>chat</em> which requires an <em>invite</em> to be able to participate, and can have
+zero or more <em>users</em>. A <em>user</em>-provided <em>chat name</em> is defined for the <em>chat</em>. Typically,
+the creator has <em>admin permissions</em> while other designated <em>users</em> have either <em>admin permissions</em>
+or <em>moderator permissions</em>. Most <em>users</em> have default permissions which allow them to send
+<em>events</em> to the <em>chat</em>. Unlike <em>(Group) DMs</em>, multiple <em>chats</em> with the same set of <em>users</em>
+can exist at the same time, even with the same <em>chat name</em>.<a href="#section-2-8.3" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-2-8.4">
+          <strong>Public Chat</strong>: A <em>group chat</em> which does not require an <em>invite</em> to participate. Usually
+these types of <em>chats</em> are discovered through a directory or website. <em>Chats</em> which require
+a request to join, or <em>knock</em>, are considered <em>public chats</em>. Sometimes these will be referred
+to as <strong>Public Chatrooms</strong>.<a href="#section-2-8.4" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-2-8.5">
+          <strong>Auditorium Chat</strong>: Either a <em>group chat</em> or <em>public chat</em> where most <em>users</em> are unable to
+send <em>events</em> and cannot be seen as <em>chat members</em> by other <em>users</em>. When an <em>event</em> is sent,
+it may appear to be sent by the <em>chat</em> itself rather than the specific <em>user</em> who sent it.
+Sometimes these are called <strong>Auditorium Rooms</strong>.<a href="#section-2-8.5" class="pilcrow">¶</a>
+</li>
+      </ul>
+<p id="section-2-9">Depending on the system, a <em>chat's</em> <em>type</em> can be mutable. For example, a <em>user</em> may be permitted
+to introduce new <em>users</em> to a <em>group DM</em> to implicitly convert it to a <em>group chat</em>, or they
+simply may be unable to implicitly or explicity change the <em>chat type</em>.<a href="#section-2-9" class="pilcrow">¶</a></p>
+<p id="section-2-10"><strong>Chat Name</strong>: The title or human-focused textually distinguishing factor for the <em>chat</em>. It
+may be automatically generated based on the <em>chat members</em>.<a href="#section-2-10" class="pilcrow">¶</a></p>
+<p id="section-2-11"><strong>Chat Avatar</strong>: A picture or graphic associated with the <em>chat</em>, usually in combination with
+a <em>chat name</em>. <em>Chat avatars</em> can be automatically generated based on the <em>chat members</em>.<a href="#section-2-11" class="pilcrow">¶</a></p>
+<p id="section-2-12"><strong>Chat Member</strong>: A joined <em>user</em> in the <em>chat</em>. Note that this may have implications on the
+associated <em>MLS Members</em> in the <em>MLS Group</em> for the <em>user's</em> <em>devices</em>.<a href="#section-2-12" class="pilcrow">¶</a></p>
+<p id="section-2-13"><strong>Event</strong>: The container for an encrypted <em>MLS Message</em>, sent over the wire between <em>servers</em>
+and <em>clients</em> (through their local <em>servers</em>). <em>Events</em> have an <strong>Event ID</strong> to canonically
+identify them at least within the <em>chat</em>.<a href="#section-2-13" class="pilcrow">¶</a></p>
+<p id="section-2-14"><strong>Chat Property</strong>: Information stored in the <em>chat</em>, such as the name, topic, avatar, <em>chat members</em>,
+etc. This may be in the shape of an <em>event</em>. Note that <em>chat properties</em> are different from
+what is needed to construct an <em>MLS Group Context</em>.<a href="#section-2-14" class="pilcrow">¶</a></p>
+<p id="section-2-15"><strong>Message</strong>: Synonymous with an <em>MLS Message</em>. <em>Messages</em> have a <strong>Message ID</strong> to canonically
+identify them at least within the <em>group</em>. These are essentially what a <em>user</em> would call a
+"message", though specifically the unencrypted portion. When encrypted, they are called <em>events</em>.<a href="#section-2-15" class="pilcrow">¶</a></p>
+<p id="section-2-16"><strong>Server</strong>: Synonymous with an <em>MLS Delivery Service (DS)</em>. Responsible for routing <em>events</em>
+to other <em>servers</em> and local <em>clients</em>. Note that the role of a <em>server</em> can be accomplished
+in the same logical place as a <em>client</em> (i.e.: in peer-to-peer environments), however the
+default assumption if not clarified is that the <em>client</em> and <em>server</em> are two different
+entities.<a href="#section-2-16" class="pilcrow">¶</a></p>
+<p id="section-2-17"><strong>Client-Server API</strong>: The interface between a <em>client</em> and <em>server</em>. This may be nothing more
+than a function call if the <em>client</em> and <em>server</em> are the same logical entity.<a href="#section-2-17" class="pilcrow">¶</a></p>
+<p id="section-2-18"><strong>Server-Server API</strong>: The interface between a <em>server</em> and another <em>server</em>.<a href="#section-2-18" class="pilcrow">¶</a></p>
+<p id="section-2-19"><strong>Transport</strong>: The method and format for moving information between entities. For example,
+a <em>Client-Server API</em> might describe HTTPS and JSON as its <em>transport</em>. For added clarity,
+documents should clarify which API surface they are defining a <em>transport</em> for ("Server-Server
+Transport", for example).<a href="#section-2-19" class="pilcrow">¶</a></p>
+<p id="section-2-20"><strong>Message Format</strong>: The specific format that <em>clients</em> use within the encrypted body of an
+<em>MLS Message</em>. Sometimes this will also be called the <strong>Content Format</strong>.<a href="#section-2-20" class="pilcrow">¶</a></p>
+<p id="section-2-21"><strong>Access Control</strong>: The set of algorithms which determine whether an <em>event</em> or <em>MLS Message</em>
+is permitted in the <em>chat</em>/<em>group</em>. For instance, this may define whether an <em>MLS Proposal</em>
+is accepted or whether the <em>user</em> is able to become a <em>chat member</em>.<a href="#section-2-21" class="pilcrow">¶</a></p>
+<p id="section-2-22"><strong>Admin Permissions</strong>: Typically at least the <em>user</em> who created the <em>chat</em>, these permissions
+grant the associated <em>users</em> an ability to change the permissions of other <em>users</em> in the <em>chat</em>.
+The set of <em>users</em> with these permissions in a <em>chat</em> are called <strong>Admins</strong>. <em>Admin permissions</em>
+inherit <em>moderator permissions</em>.<a href="#section-2-22" class="pilcrow">¶</a></p>
+<p id="section-2-23"><strong>Moderator Permissions</strong>: These permissions grant the associated <em>users</em> an ability to <em>kick</em>,
+<em>ban</em>, or otherwise restrict another <em>user's</em> ability to use the <em>chat</em>. For example, deleting
+a spammer's <em>events</em>. The set of <em>users</em> with these permissions in a <em>chat</em> are called <strong>Moderators</strong>.<a href="#section-2-23" class="pilcrow">¶</a></p>
+<p id="section-2-24">Note that with both <em>moderator permissions</em> and <em>admin permissions</em> a system may have finer
+granularity, such as a set of <em>users</em> being able to <em>kick</em> but not <em>ban</em>. Documents with these
+semantics should clarify this case.<a href="#section-2-24" class="pilcrow">¶</a></p>
+<p id="section-2-25"><strong>Invite</strong>: An action taken by a <em>user</em> in a <em>chat</em> to encourage another <em>user</em> to become a
+<em>chat member</em> (or joined to the <em>chat</em>). This can be explicit through the <em>server-server API</em>,
+or implicit with an <em>invite code</em>.<a href="#section-2-25" class="pilcrow">¶</a></p>
+<p id="section-2-26"><strong>Invite Code</strong>: An out-of-band <em>invite</em> for a <em>user</em> to join the <em>chat</em>, such as a text string
+shared with the target <em>user</em>. The sharing mechanism can additionally be a URL or QR code.<a href="#section-2-26" class="pilcrow">¶</a></p>
+<p id="section-2-27"><strong>Direct Invite</strong>: An invite to a <em>DM</em> or <em>Group DM</em>. These <em>invites</em> might appear in a different
+section of the <em>client's</em> UI to denote their semantic difference from a non-<em>DM</em> <em>invite</em>.<a href="#section-2-27" class="pilcrow">¶</a></p>
+<p id="section-2-28"><strong>Kick</strong>: An action taken by a <em>user</em> in a <em>chat</em> to remove another <em>user</em>, assuming the sender
+has <em>moderator permissions</em>. The affected <em>user</em> can re-join the <em>chat</em> with either another <em>invite</em>
+or by simply joining, depending on the <em>chat type</em>.<a href="#section-2-28" class="pilcrow">¶</a></p>
+<p id="section-2-29"><strong>Ban</strong>: Similar to <em>kicking</em>, a <em>user</em> is <em>kicked</em> from the room and not allowed to re-join
+until <em>unbanned</em> by a <em>moderator</em>. If a <em>user</em> is <em>banned</em>, they are typically not able to
+<em>knock</em> to get back into the <em>chat</em> either.<a href="#section-2-29" class="pilcrow">¶</a></p>
+<p id="section-2-30"><strong>Knock</strong>: A request from a <em>user</em> (who is not currently a <em>chat member</em>) to participate in the
+<em>chat</em>. Upon acceptance, the requesting <em>user</em> may receive an <em>invite</em> or be directly joined to
+the <em>chat</em>. Upon rejection, the requesting <em>user</em> can be <em>banned</em> or otherwise declined.<a href="#section-2-30" class="pilcrow">¶</a></p>
+<p id="section-2-31"><strong>Status</strong>: Temporarily displayed text or images associated with a <em>user's</em> profile. Instagram
+Stories are an example of a <em>user's</em> <em>status</em>.<a href="#section-2-31" class="pilcrow">¶</a></p>
+<div id="diagram-reference">
+<section id="section-2.1">
+        <h3 id="name-diagram-reference">
+<a href="#section-2.1" class="section-number selfRef">2.1. </a><a href="#name-diagram-reference" class="section-name selfRef">Diagram Reference</a>
+        </h3>
+<p id="section-2.1-1">In the simplest possible form, interoperable messaging between two end users looks as such:<a href="#section-2.1-1" class="pilcrow">¶</a></p>
+<span id="name-typical-simplified-architec"></span><div id="fig-typical-arch">
+<figure id="figure-1">
+          <div id="section-2.1-2.1">
+            <div class="alignLeft art-svg artwork" id="section-2.1-2.1.1">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="160" width="592" viewBox="0 0 592 160" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px">
+                <path d="M 8,32 L 8,96" fill="none" stroke="black"></path>
+                <path d="M 48,104 L 48,144" fill="none" stroke="black"></path>
+                <path d="M 96,32 L 96,96" fill="none" stroke="black"></path>
+                <path d="M 160,32 L 160,96" fill="none" stroke="black"></path>
+                <path d="M 264,32 L 264,96" fill="none" stroke="black"></path>
+                <path d="M 328,32 L 328,96" fill="none" stroke="black"></path>
+                <path d="M 432,32 L 432,96" fill="none" stroke="black"></path>
+                <path d="M 496,32 L 496,96" fill="none" stroke="black"></path>
+                <path d="M 544,104 L 544,144" fill="none" stroke="black"></path>
+                <path d="M 584,32 L 584,96" fill="none" stroke="black"></path>
+                <path d="M 8,32 L 96,32" fill="none" stroke="black"></path>
+                <path d="M 160,32 L 264,32" fill="none" stroke="black"></path>
+                <path d="M 328,32 L 432,32" fill="none" stroke="black"></path>
+                <path d="M 496,32 L 584,32" fill="none" stroke="black"></path>
+                <path d="M 104,64 L 152,64" fill="none" stroke="black"></path>
+                <path d="M 272,64 L 320,64" fill="none" stroke="black"></path>
+                <path d="M 440,64 L 488,64" fill="none" stroke="black"></path>
+                <path d="M 8,96 L 96,96" fill="none" stroke="black"></path>
+                <path d="M 160,96 L 264,96" fill="none" stroke="black"></path>
+                <path d="M 328,96 L 432,96" fill="none" stroke="black"></path>
+                <path d="M 496,96 L 584,96" fill="none" stroke="black"></path>
+                <path d="M 48,144 L 544,144" fill="none" stroke="black"></path>
+                <polygon class="arrowhead" points="552,104 540,98.4 540,109.6" fill="black" transform="rotate(270,544,104)"></polygon>
+                <polygon class="arrowhead" points="496,64 484,58.4 484,69.6" fill="black" transform="rotate(0,488,64)"></polygon>
+                <polygon class="arrowhead" points="448,64 436,58.4 436,69.6" fill="black" transform="rotate(180,440,64)"></polygon>
+                <polygon class="arrowhead" points="328,64 316,58.4 316,69.6" fill="black" transform="rotate(0,320,64)"></polygon>
+                <polygon class="arrowhead" points="280,64 268,58.4 268,69.6" fill="black" transform="rotate(180,272,64)"></polygon>
+                <polygon class="arrowhead" points="160,64 148,58.4 148,69.6" fill="black" transform="rotate(0,152,64)"></polygon>
+                <polygon class="arrowhead" points="112,64 100,58.4 100,69.6" fill="black" transform="rotate(180,104,64)"></polygon>
+                <polygon class="arrowhead" points="56,104 44,98.4 44,109.6" fill="black" transform="rotate(270,48,104)"></polygon>
+                <g class="text">
+                  <text x="128" y="52">A</text>
+                  <text x="296" y="52">B</text>
+                  <text x="464" y="52">C</text>
+                  <text x="44" y="68">Client</text>
+                  <text x="80" y="68">1</text>
+                  <text x="204" y="68">Provider</text>
+                  <text x="248" y="68">1</text>
+                  <text x="372" y="68">Provider</text>
+                  <text x="416" y="68">2</text>
+                  <text x="532" y="68">Client</text>
+                  <text x="568" y="68">2</text>
+                  <text x="296" y="132">D</text>
+                </g>
+              </svg><a href="#section-2.1-2.1.1" class="pilcrow">¶</a>
+</div>
+</div>
+<figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
+<a href="#name-typical-simplified-architec" class="selfRef">Typical, simplified, architecture for interoperability</a>
+          </figcaption></figure>
+</div>
+<p id="section-2.1-3">In this figure, Client 1 is directly connected to Provider 1 over <code>A</code>. <code>A</code> is a
+provider-specific Client-Server API and transport. Similarly, Client 2 is directly
+connected to Provider 2 over <code>C</code>. <code>C</code> is also a provider-specific Client-Server API
+and transport.<a href="#section-2.1-3" class="pilcrow">¶</a></p>
+<p id="section-2.1-4">Provider 1 and 2 talk to each other with a Server-Server API over a transport. This is <code>B</code>
+in the figure.<a href="#section-2.1-4" class="pilcrow">¶</a></p>
+<p id="section-2.1-5">Clients additionally have an implicit method of communication (<code>D</code> in the figure) where
+they use a shared Message Format. There is no transport for <code>D</code> in this figure: the figure
+is denoting that servers/providers are unable to assist with a format conversion due
+to the event's content (an MLS message) being encrypted.<a href="#section-2.1-5" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="iana-considerations">
+<section id="section-3">
+      <h2 id="name-iana-considerations">
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
+      </h2>
+<p id="section-3-1">This document has no IANA actions.<a href="#section-3-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<section id="section-4">
+      <h2 id="name-normative-references">
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+      </h2>
+<dl class="references">
+<dt id="I-D.ietf-mls-architecture">[I-D.ietf-mls-architecture]</dt>
+      <dd>
+<span class="refAuthor">Beurdouche, B.</span>, <span class="refAuthor">Rescorla, E.</span>, <span class="refAuthor">Omara, E.</span>, <span class="refAuthor">Inguva, S.</span>, and <span class="refAuthor">A. Duric</span>, <span class="refTitle">"The Messaging Layer Security (MLS) Architecture"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-mls-architecture-10</span>, <time datetime="2022-12-16" class="refDate">16 December 2022</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-mls-architecture-10">https://datatracker.ietf.org/doc/html/draft-ietf-mls-architecture-10</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.ietf-mls-protocol">[I-D.ietf-mls-protocol]</dt>
+    <dd>
+<span class="refAuthor">Barnes, R.</span>, <span class="refAuthor">Beurdouche, B.</span>, <span class="refAuthor">Robert, R.</span>, <span class="refAuthor">Millican, J.</span>, <span class="refAuthor">Omara, E.</span>, and <span class="refAuthor">K. Cohn-Gordon</span>, <span class="refTitle">"The Messaging Layer Security (MLS) Protocol"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-mls-protocol-20</span>, <time datetime="2023-03-27" class="refDate">27 March 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-mls-protocol-20">https://datatracker.ietf.org/doc/html/draft-ietf-mls-protocol-20</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+</dl>
+</section>
+<div id="authors-addresses">
+<section id="appendix-A">
+      <h2 id="name-authors-address">
+<a href="#name-authors-address" class="section-name selfRef">Author's Address</a>
+      </h2>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Travis Ralston</span></div>
+<div dir="auto" class="left"><span class="org">The Matrix.org Foundation C.I.C.</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:travisr@matrix.org" class="email">travisr@matrix.org</a>
+</div>
+</address>
+</section>
+</div>
+<script>const toc = document.getElementById("toc");
+toc.querySelector("h2").addEventListener("click", e => {
+  toc.classList.toggle("active");
+});
+toc.querySelector("nav").addEventListener("click", e => {
+  toc.classList.remove("active");
+});
+</script>
+</body>
+</html>
