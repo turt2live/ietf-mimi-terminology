@@ -91,7 +91,7 @@ A chat can have any one of many different characterizations/behaviours, called *
   when a user searches for another user to message, rather than creating a group chat.
   All users in the chat have the same permission capabilities under the access control
   semantics. The chat name is that of the opponent user in the DM. DMs are typically
-  canonical: exactly one chat with the opponent exists at a time.
+  canonical: exactly one chat with the opponent user exists at a time.
 
 * **Group DM**: A subtype of DMs where there are more than two users. The chat name
   consists of the opponent users in the DM. Inherited from DMs, Group DMs are also
@@ -119,6 +119,11 @@ A chat can have any one of many different characterizations/behaviours, called *
 Depending on the system, a chat's type can be mutable. For example, a user may be permitted
 to introduce new users to a group DM to implicitly convert it to a group chat, or they
 simply may be unable to implicitly or explicity change the chat type.
+
+**Opponent Users**: From the perspective of a client, the users other than the current
+user in a chat. Typically, the current user of a client will be the one which is logged
+in (and if a client supports multiple accounts, the active session within that client
+instead).
 
 **Chat Name**: The title or human-focused textually distinguishing factor for the chat. It
 may be automatically generated based on the chat members.
