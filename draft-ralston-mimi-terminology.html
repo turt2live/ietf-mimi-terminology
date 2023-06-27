@@ -17,10 +17,10 @@ concepts within MIMI.
 <meta content="draft-ralston-mimi-terminology-latest" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.17.3
-    Python 3.11.3
+    Python 3.11.4
     appdirs 1.4.4
     ConfigArgParse 1.5.3
-    google-i18n-address 3.0.0
+    google-i18n-address 3.1.0
     intervaltree 3.1.0
     Jinja2 3.1.2
     lxml 4.9.2
@@ -1054,7 +1054,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Ralston</td>
-<td class="center">Expires 11 December 2023</td>
+<td class="center">Expires 29 December 2023</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1067,12 +1067,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ralston-mimi-terminology-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2023-06-09" class="published">9 June 2023</time>
+<time datetime="2023-06-27" class="published">27 June 2023</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2023-12-11">11 December 2023</time></dd>
+<dd class="expires"><time datetime="2023-12-29">29 December 2023</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1123,7 +1123,7 @@ concepts within MIMI.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 11 December 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 29 December 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1201,124 +1201,128 @@ described in this document or from MLS.<a href="#section-1-3" class="pilcrow">¶
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-terminology" class="section-name selfRef">Terminology</a>
       </h2>
 <p id="section-2-1">MIMI defines:<a href="#section-2-1" class="pilcrow">¶</a></p>
-<p id="section-2-2"><strong>Messaging Provider</strong> or <strong>Provider</strong>: A service offering instant messaging to <em>users</em>.
-Typically a <em>provider</em> will have a <em>server</em> to route <em>events</em> between <em>users</em> (or <em>clients</em>,
+<p id="section-2-2"><strong>Messaging Provider</strong> or <strong>Provider</strong>: A service offering instant messaging to users.
+Typically a provider will have a server to route events between users (or clients,
 specifically).<a href="#section-2-2" class="pilcrow">¶</a></p>
-<p id="section-2-3"><strong>User</strong>: A (normally) human operator of a <em>client</em>. <em>Users</em> have a <strong>User ID</strong> to identify
+<p id="section-2-3"><strong>User</strong>: A (normally) human operator of a client. Users have a <strong>User ID</strong> to identify
 them canonically within the system.<a href="#section-2-3" class="pilcrow">¶</a></p>
 <p id="section-2-4"><strong>User Identity</strong>: A mapping of <strong>User ID</strong> to external identifier, such as a phone number.
-In some cases, the <em>user identity</em> can be synonymous with the <em>user ID</em>, however the default
+In some cases, the user identity can be synonymous with the user ID, however the default
 assumption if not clarified is that they are different concepts.<a href="#section-2-4" class="pilcrow">¶</a></p>
 <p id="section-2-5"><strong>Client</strong>: A user interface for messaging, performing encryption as needed. Presents
-<em>chats</em> to the <em>user</em> to interact with. Synonymous with <em>MLS Client</em>. <em>Clients</em> have a
-<strong>Client ID</strong> to canonically identify them among a <em>user's</em> other <em>clients</em>. <em>Clients</em>
+chats to the user to interact with. Synonymous with MLS Client. Clients have a
+<strong>Client ID</strong> to canonically identify them among a user's other clients. Clients
 can additionally be called <strong>Devices</strong> to differentiate them from a named application.<a href="#section-2-5" class="pilcrow">¶</a></p>
-<p id="section-2-6"><strong>Chat</strong>: The place where <em>users</em> communicate. This is semantically distinct from an
-<em>MLS Group</em>: an <em>MLS Group</em> is responsible for handling <em>client</em> keys while a <em>chat</em> is
-simply the user-facing construct for communication, however systems can declare a <em>chat</em>
-to be the same as an <em>MLS Group</em> depending on their design. <em>Chats</em> have a <strong>Chat ID</strong> to
-canonically identify them within the system. <em>Chats</em> can additionally be called <strong>Rooms</strong>,
+<p id="section-2-6"><strong>Chat</strong>: The place where users communicate. This is semantically distinct from an
+MLS Group: an MLS Group is responsible for handling client keys while a chat is
+simply the user-facing construct for communication, however systems can declare a chat
+to be the same as an MLS Group depending on their design. Chats have a <strong>Chat ID</strong> to
+canonically identify them within the system. Chats can additionally be called <strong>Rooms</strong>,
 <strong>Conversations</strong>, and <strong>Channels</strong>.<a href="#section-2-6" class="pilcrow">¶</a></p>
-<p id="section-2-7">A <em>chat</em> can have any one of many different characterizations/behaviours, called <strong>Chat Types</strong>:<a href="#section-2-7" class="pilcrow">¶</a></p>
+<p id="section-2-7">A chat can have any one of many different characterizations/behaviours, called <strong>Chat Types</strong>:<a href="#section-2-7" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-2-8.1">
-          <strong>DM</strong>: A <em>direct message</em> <em>chat</em> between exactly two <em>users</em>. <em>DMs</em> are typically created
-when a <em>user</em> searches for another <em>user</em> to message, rather than creating a <em>group chat</em>.
-All <em>users</em> in the <em>chat</em> have the same permission capabilities under the <em>access control</em>
-semantics. The <em>chat name</em> is that of the opponent <em>user</em> in the <em>DM</em>. <em>DMs</em> are typically
-canonical: exactly one <em>chat</em> with the opponent exists at a time.<a href="#section-2-8.1" class="pilcrow">¶</a>
+          <strong>DM</strong>: A direct message chat between exactly two users. DMs are typically created
+when a user searches for another user to message, rather than creating a group chat.
+All users in the chat have the same permission capabilities under the access control
+semantics. The chat name is that of the opponent user in the DM. DMs are typically
+canonical: exactly one chat with the opponent user exists at a time.<a href="#section-2-8.1" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="section-2-8.2">
-          <strong>Group DM</strong>: A subtype of <em>DMs</em> where there are more than two <em>users</em>. The <em>chat name</em>
-consists of the opponent <em>users</em> in the <em>DM</em>. Inherited from <em>DMs</em>, <em>Group DMs</em> are also
-canonical: creating a new <em>Group DM</em> with the exact same <em>users</em> ultimately redirects to
-the existing <em>chat</em> instead of creating a new one. These may also be called <strong>Ad-hoc Chats</strong>
+          <strong>Group DM</strong>: A subtype of DMs where there are more than two users. The chat name
+consists of the opponent users in the DM. Inherited from DMs, Group DMs are also
+canonical: creating a new Group DM with the exact same users ultimately redirects to
+the existing chat instead of creating a new one. These may also be called <strong>Ad-hoc Chats</strong>
 in some scenarios.<a href="#section-2-8.2" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="section-2-8.3">
-          <strong>Group Chat</strong>: A <em>chat</em> which requires an <em>invite</em> to be able to participate, and can have
-zero or more <em>users</em>. A <em>user</em>-provided <em>chat name</em> is defined for the <em>chat</em>. Typically,
-the creator has <em>admin permissions</em> while other designated <em>users</em> have either <em>admin permissions</em>
-or <em>moderator permissions</em>. Most <em>users</em> have default permissions which allow them to send
-<em>events</em> to the <em>chat</em>. Unlike <em>(Group) DMs</em>, multiple <em>chats</em> with the same set of <em>users</em>
-can exist at the same time, even with the same <em>chat name</em>.<a href="#section-2-8.3" class="pilcrow">¶</a>
+          <strong>Group Chat</strong>: A chat which requires an invite to be able to participate, and can have
+zero or more users. A user-provided chat name is defined for the chat. Typically,
+the creator has admin permissions while other designated users have either admin permissions
+or moderator permissions. Most users have default permissions which allow them to send
+events to the chat. Unlike (Group) DMs, multiple chats with the same set of users
+can exist at the same time, even with the same chat name.<a href="#section-2-8.3" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="section-2-8.4">
-          <strong>Public Chat</strong>: A <em>group chat</em> which does not require an <em>invite</em> to participate. Usually
-these types of <em>chats</em> are discovered through a directory or website. <em>Chats</em> which require
-a request to join, or <em>knock</em>, are considered <em>public chats</em>. Sometimes these will be referred
+          <strong>Public Chat</strong>: A group chat which does not require an invite to participate. Usually
+these types of chats are discovered through a directory or website. Chats which require
+a request to join, or knock, are considered public chats. Sometimes these will be referred
 to as <strong>Public Chatrooms</strong>.<a href="#section-2-8.4" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="section-2-8.5">
-          <strong>Auditorium Chat</strong>: Either a <em>group chat</em> or <em>public chat</em> where most <em>users</em> are unable to
-send <em>events</em> and cannot be seen as <em>chat members</em> by other <em>users</em>. When an <em>event</em> is sent,
-it may appear to be sent by the <em>chat</em> itself rather than the specific <em>user</em> who sent it.
+          <strong>Auditorium Chat</strong>: Either a group chat or public chat where most users are unable to
+send events and cannot be seen as chat members by other users. When an event is sent,
+it may appear to be sent by the chat itself rather than the specific user who sent it.
 Sometimes these are called <strong>Auditorium Rooms</strong>.<a href="#section-2-8.5" class="pilcrow">¶</a>
 </li>
       </ul>
-<p id="section-2-9">Depending on the system, a <em>chat's</em> <em>type</em> can be mutable. For example, a <em>user</em> may be permitted
-to introduce new <em>users</em> to a <em>group DM</em> to implicitly convert it to a <em>group chat</em>, or they
-simply may be unable to implicitly or explicity change the <em>chat type</em>.<a href="#section-2-9" class="pilcrow">¶</a></p>
-<p id="section-2-10"><strong>Chat Name</strong>: The title or human-focused textually distinguishing factor for the <em>chat</em>. It
-may be automatically generated based on the <em>chat members</em>.<a href="#section-2-10" class="pilcrow">¶</a></p>
-<p id="section-2-11"><strong>Chat Avatar</strong>: A picture or graphic associated with the <em>chat</em>, usually in combination with
-a <em>chat name</em>. <em>Chat avatars</em> can be automatically generated based on the <em>chat members</em>.<a href="#section-2-11" class="pilcrow">¶</a></p>
-<p id="section-2-12"><strong>Chat Member</strong>: A joined <em>user</em> in the <em>chat</em>. Note that this may have implications on the
-associated <em>MLS Members</em> in the <em>MLS Group</em> for the <em>user's</em> <em>devices</em>.<a href="#section-2-12" class="pilcrow">¶</a></p>
-<p id="section-2-13"><strong>Event</strong>: The container for an encrypted <em>MLS Message</em>, sent over the wire between <em>servers</em>
-and <em>clients</em> (through their local <em>servers</em>). <em>Events</em> have an <strong>Event ID</strong> to canonically
-identify them at least within the <em>chat</em>.<a href="#section-2-13" class="pilcrow">¶</a></p>
-<p id="section-2-14"><strong>Chat Property</strong>: Information stored in the <em>chat</em>, such as the name, topic, avatar, <em>chat members</em>,
-etc. This may be in the shape of an <em>event</em>. Note that <em>chat properties</em> are different from
-what is needed to construct an <em>MLS Group Context</em>.<a href="#section-2-14" class="pilcrow">¶</a></p>
-<p id="section-2-15"><strong>Message</strong>: Synonymous with an <em>MLS Message</em>. <em>Messages</em> have a <strong>Message ID</strong> to canonically
-identify them at least within the <em>group</em>. These are essentially what a <em>user</em> would call a
-"message", though specifically the unencrypted portion. When encrypted, they are called <em>events</em>.<a href="#section-2-15" class="pilcrow">¶</a></p>
-<p id="section-2-16"><strong>Server</strong>: Synonymous with an <em>MLS Delivery Service (DS)</em>. Responsible for routing <em>events</em>
-to other <em>servers</em> and local <em>clients</em>. Note that the role of a <em>server</em> can be accomplished
-in the same logical place as a <em>client</em> (i.e.: in peer-to-peer environments), however the
-default assumption if not clarified is that the <em>client</em> and <em>server</em> are two different
-entities.<a href="#section-2-16" class="pilcrow">¶</a></p>
-<p id="section-2-17"><strong>Client-Server API</strong>: The interface between a <em>client</em> and <em>server</em>. This may be nothing more
-than a function call if the <em>client</em> and <em>server</em> are the same logical entity.<a href="#section-2-17" class="pilcrow">¶</a></p>
-<p id="section-2-18"><strong>Server-Server API</strong>: The interface between a <em>server</em> and another <em>server</em>.<a href="#section-2-18" class="pilcrow">¶</a></p>
-<p id="section-2-19"><strong>Transport</strong>: The method and format for moving information between entities. For example,
-a <em>Client-Server API</em> might describe HTTPS and JSON as its <em>transport</em>. For added clarity,
-documents should clarify which API surface they are defining a <em>transport</em> for ("Server-Server
-Transport", for example).<a href="#section-2-19" class="pilcrow">¶</a></p>
-<p id="section-2-20"><strong>Message Format</strong>: The specific format that <em>clients</em> use within the encrypted body of an
-<em>MLS Message</em>. Sometimes this will also be called the <strong>Content Format</strong>.<a href="#section-2-20" class="pilcrow">¶</a></p>
-<p id="section-2-21"><strong>Access Control</strong>: The set of algorithms which determine whether an <em>event</em> or <em>MLS Message</em>
-is permitted in the <em>chat</em>/<em>group</em>. For instance, this may define whether an <em>MLS Proposal</em>
-is accepted or whether the <em>user</em> is able to become a <em>chat member</em>.<a href="#section-2-21" class="pilcrow">¶</a></p>
-<p id="section-2-22"><strong>Admin Permissions</strong>: Typically at least the <em>user</em> who created the <em>chat</em>, these permissions
-grant the associated <em>users</em> an ability to change the permissions of other <em>users</em> in the <em>chat</em>.
-The set of <em>users</em> with these permissions in a <em>chat</em> are called <strong>Admins</strong>. <em>Admin permissions</em>
-inherit <em>moderator permissions</em>.<a href="#section-2-22" class="pilcrow">¶</a></p>
-<p id="section-2-23"><strong>Moderator Permissions</strong>: These permissions grant the associated <em>users</em> an ability to <em>kick</em>,
-<em>ban</em>, or otherwise restrict another <em>user's</em> ability to use the <em>chat</em>. For example, deleting
-a spammer's <em>events</em>. The set of <em>users</em> with these permissions in a <em>chat</em> are called <strong>Moderators</strong>.<a href="#section-2-23" class="pilcrow">¶</a></p>
-<p id="section-2-24">Note that with both <em>moderator permissions</em> and <em>admin permissions</em> a system may have finer
-granularity, such as a set of <em>users</em> being able to <em>kick</em> but not <em>ban</em>. Documents with these
-semantics should clarify this case.<a href="#section-2-24" class="pilcrow">¶</a></p>
-<p id="section-2-25"><strong>Invite</strong>: An action taken by a <em>user</em> in a <em>chat</em> to encourage another <em>user</em> to become a
-<em>chat member</em> (or joined to the <em>chat</em>). This can be explicit through the <em>server-server API</em>,
-or implicit with an <em>invite code</em>.<a href="#section-2-25" class="pilcrow">¶</a></p>
-<p id="section-2-26"><strong>Invite Code</strong>: An out-of-band <em>invite</em> for a <em>user</em> to join the <em>chat</em>, such as a text string
-shared with the target <em>user</em>. The sharing mechanism can additionally be a URL or QR code.<a href="#section-2-26" class="pilcrow">¶</a></p>
-<p id="section-2-27"><strong>Direct Invite</strong>: An invite to a <em>DM</em> or <em>Group DM</em>. These <em>invites</em> might appear in a different
-section of the <em>client's</em> UI to denote their semantic difference from a non-<em>DM</em> <em>invite</em>.<a href="#section-2-27" class="pilcrow">¶</a></p>
-<p id="section-2-28"><strong>Kick</strong>: An action taken by a <em>user</em> in a <em>chat</em> to remove another <em>user</em>, assuming the sender
-has <em>moderator permissions</em>. The affected <em>user</em> can re-join the <em>chat</em> with either another <em>invite</em>
-or by simply joining, depending on the <em>chat type</em>.<a href="#section-2-28" class="pilcrow">¶</a></p>
-<p id="section-2-29"><strong>Ban</strong>: Similar to <em>kicking</em>, a <em>user</em> is <em>kicked</em> from the room and not allowed to re-join
-until <em>unbanned</em> by a <em>moderator</em>. If a <em>user</em> is <em>banned</em>, they are typically not able to
-<em>knock</em> to get back into the <em>chat</em> either.<a href="#section-2-29" class="pilcrow">¶</a></p>
-<p id="section-2-30"><strong>Knock</strong>: A request from a <em>user</em> (who is not currently a <em>chat member</em>) to participate in the
-<em>chat</em>. Upon acceptance, the requesting <em>user</em> may receive an <em>invite</em> or be directly joined to
-the <em>chat</em>. Upon rejection, the requesting <em>user</em> can be <em>banned</em> or otherwise declined.<a href="#section-2-30" class="pilcrow">¶</a></p>
-<p id="section-2-31"><strong>Status</strong>: Temporarily displayed text or images associated with a <em>user's</em> profile. Instagram
-Stories are an example of a <em>user's</em> <em>status</em>.<a href="#section-2-31" class="pilcrow">¶</a></p>
+<p id="section-2-9">Depending on the system, a chat's type can be mutable. For example, a user may be permitted
+to introduce new users to a group DM to implicitly convert it to a group chat, or they
+simply may be unable to implicitly or explicity change the chat type.<a href="#section-2-9" class="pilcrow">¶</a></p>
+<p id="section-2-10"><strong>Opponent Users</strong>: From the perspective of a client, the users other than the current
+user in a chat. Typically, the current user of a client will be the one which is logged
+in (and if a client supports multiple accounts, the active session within that client
+instead).<a href="#section-2-10" class="pilcrow">¶</a></p>
+<p id="section-2-11"><strong>Chat Name</strong>: The title or human-focused textually distinguishing factor for the chat. It
+may be automatically generated based on the chat members.<a href="#section-2-11" class="pilcrow">¶</a></p>
+<p id="section-2-12"><strong>Chat Avatar</strong>: A picture or graphic associated with the chat, usually in combination with
+a chat name. Chat avatars can be automatically generated based on the chat members.<a href="#section-2-12" class="pilcrow">¶</a></p>
+<p id="section-2-13"><strong>Chat Member</strong>: A joined user in the chat. Note that this may have implications on the
+associated MLS Members in the MLS Group for the user's devices.<a href="#section-2-13" class="pilcrow">¶</a></p>
+<p id="section-2-14"><strong>Event</strong>: The container for an encrypted MLS Message, sent over the wire between servers
+and clients (through their local servers). Events have an <strong>Event ID</strong> to canonically
+identify them at least within the chat.<a href="#section-2-14" class="pilcrow">¶</a></p>
+<p id="section-2-15"><strong>Chat Property</strong>: Information stored in the chat, such as the name, topic, avatar, chat members,
+etc. This may be in the shape of an event. Note that chat properties are different from
+what is needed to construct an MLS Group Context.<a href="#section-2-15" class="pilcrow">¶</a></p>
+<p id="section-2-16"><strong>Message</strong>: Synonymous with an MLS Message. Messages have a <strong>Message ID</strong> to canonically
+identify them at least within the group. These are essentially what a user would call a
+"message", though specifically the unencrypted portion. When encrypted, they are called events.<a href="#section-2-16" class="pilcrow">¶</a></p>
+<p id="section-2-17"><strong>Server</strong>: Synonymous with an MLS Delivery Service (DS). Responsible for routing events
+to other servers and local clients. Note that the role of a server can be accomplished
+in the same logical place as a client (i.e.: in peer-to-peer environments), however the
+default assumption if not clarified is that the client and server are two different
+entities.<a href="#section-2-17" class="pilcrow">¶</a></p>
+<p id="section-2-18"><strong>Client-Server API</strong>: The interface between a client and server. This may be nothing more
+than a function call if the client and server are the same logical entity.<a href="#section-2-18" class="pilcrow">¶</a></p>
+<p id="section-2-19"><strong>Server-Server API</strong>: The interface between a server and another server.<a href="#section-2-19" class="pilcrow">¶</a></p>
+<p id="section-2-20"><strong>Transport</strong>: The method and format for moving information between entities. For example,
+a Client-Server API might describe HTTPS and JSON as its transport. For added clarity,
+documents should clarify which API surface they are defining a transport for ("Server-Server
+Transport", for example).<a href="#section-2-20" class="pilcrow">¶</a></p>
+<p id="section-2-21"><strong>Message Format</strong>: The specific format that clients use within the encrypted body of an
+MLS Message. Sometimes this will also be called the <strong>Content Format</strong>.<a href="#section-2-21" class="pilcrow">¶</a></p>
+<p id="section-2-22"><strong>Access Control</strong>: The set of algorithms which determine whether an event or MLS Message
+is permitted in the chat/group. For instance, this may define whether an MLS Proposal
+is accepted or whether the user is able to become a chat member.<a href="#section-2-22" class="pilcrow">¶</a></p>
+<p id="section-2-23"><strong>Admin Permissions</strong>: Typically at least the user who created the chat, these permissions
+grant the associated users an ability to change the permissions of other users in the chat.
+The set of users with these permissions in a chat are called <strong>Admins</strong>. Admin permissions
+inherit moderator permissions.<a href="#section-2-23" class="pilcrow">¶</a></p>
+<p id="section-2-24"><strong>Moderator Permissions</strong>: These permissions grant the associated users an ability to kick,
+ban, or otherwise restrict another user's ability to use the chat. For example, deleting
+a spammer's events. The set of users with these permissions in a chat are called <strong>Moderators</strong>.<a href="#section-2-24" class="pilcrow">¶</a></p>
+<p id="section-2-25">Note that with both moderator permissions and admin permissions a system may have finer
+granularity, such as a set of users being able to kick but not ban. Documents with these
+semantics should clarify this case.<a href="#section-2-25" class="pilcrow">¶</a></p>
+<p id="section-2-26"><strong>Invite</strong>: An action taken by a user in a chat to encourage another user to become a
+chat member (or joined to the chat). This can be explicit through the server-server API,
+or implicit with an invite code.<a href="#section-2-26" class="pilcrow">¶</a></p>
+<p id="section-2-27"><strong>Invite Code</strong>: An out-of-band invite for a user to join the chat, such as a text string
+shared with the target user. The sharing mechanism can additionally be a URL or QR code.<a href="#section-2-27" class="pilcrow">¶</a></p>
+<p id="section-2-28"><strong>Direct Invite</strong>: An invite to a DM or Group DM. These invites might appear in a different
+section of the client's UI to denote their semantic difference from a non-DM invite.<a href="#section-2-28" class="pilcrow">¶</a></p>
+<p id="section-2-29"><strong>Kick</strong>: An action taken by a user in a chat to remove another user, assuming the sender
+has moderator permissions. The affected user can re-join the chat with either another invite
+or by simply joining, depending on the chat type.<a href="#section-2-29" class="pilcrow">¶</a></p>
+<p id="section-2-30"><strong>Ban</strong>: Similar to kicking, a user is kicked from the room and not allowed to re-join
+until unbanned by a moderator. If a user is banned, they are typically not able to
+knock to get back into the chat either.<a href="#section-2-30" class="pilcrow">¶</a></p>
+<p id="section-2-31"><strong>Knock</strong>: A request from a user (who is not currently a chat member) to participate in the
+chat. Upon acceptance, the requesting user may receive an invite or be directly joined to
+the chat. Upon rejection, the requesting user can be banned or otherwise declined.<a href="#section-2-31" class="pilcrow">¶</a></p>
+<p id="section-2-32"><strong>Status</strong>: Temporarily displayed text or images associated with a user's profile. Instagram
+Stories are an example of a user's status.<a href="#section-2-32" class="pilcrow">¶</a></p>
 <div id="diagram-reference">
 <section id="section-2.1">
         <h3 id="name-diagram-reference">

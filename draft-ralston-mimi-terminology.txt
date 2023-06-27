@@ -4,8 +4,8 @@
 
 More Instant Messaging Interoperability                       T. Ralston
 Internet-Draft                          The Matrix.org Foundation C.I.C.
-Intended status: Informational                               9 June 2023
-Expires: 11 December 2023
+Intended status: Informational                              27 June 2023
+Expires: 29 December 2023
 
 
                             MIMI Terminology
@@ -48,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 December 2023.
+   This Internet-Draft will expire on 29 December 2023.
 
 Copyright Notice
 
@@ -99,184 +99,183 @@ Table of Contents
    MIMI defines:
 
    *Messaging Provider* or *Provider*: A service offering instant
-   messaging to _users_. Typically a _provider_ will have a _server_ to
-   route _events_ between _users_ (or _clients_, specifically).
+   messaging to users.  Typically a provider will have a server to route
+   events between users (or clients, specifically).
 
-   *User*: A (normally) human operator of a _client_. _Users_ have a
-   *User ID* to identify them canonically within the system.
+   *User*: A (normally) human operator of a client.  Users have a *User
+   ID* to identify them canonically within the system.
 
    *User Identity*: A mapping of *User ID* to external identifier, such
-   as a phone number.  In some cases, the _user identity_ can be
-   synonymous with the _user ID_, however the default assumption if not
+   as a phone number.  In some cases, the user identity can be
+   synonymous with the user ID, however the default assumption if not
    clarified is that they are different concepts.
 
    *Client*: A user interface for messaging, performing encryption as
-   needed.  Presents _chats_ to the _user_ to interact with.  Synonymous
-   with _MLS Client_. _Clients_ have a *Client ID* to canonically
-   identify them among a _user's_ other _clients_. _Clients_ can
-   additionally be called *Devices* to differentiate them from a named
-   application.
+   needed.  Presents chats to the user to interact with.  Synonymous
+   with MLS Client.  Clients have a *Client ID* to canonically identify
+   them among a user's other clients.  Clients can additionally be
+   called *Devices* to differentiate them from a named application.
 
-   *Chat*: The place where _users_ communicate.  This is semantically
-   distinct from an _MLS Group_: an _MLS Group_ is responsible for
-   handling _client_ keys while a _chat_ is simply the user-facing
-   construct for communication, however systems can declare a _chat_ to
-   be the same as an _MLS Group_ depending on their design. _Chats_ have
-   a *Chat ID* to canonically identify them within the system. _Chats_
-   can additionally be called *Rooms*, *Conversations*, and *Channels*.
+   *Chat*: The place where users communicate.  This is semantically
+   distinct from an MLS Group: an MLS Group is responsible for handling
+   client keys while a chat is simply the user-facing construct for
+   communication, however systems can declare a chat to be the same as
+   an MLS Group depending on their design.  Chats have a *Chat ID* to
+   canonically identify them within the system.  Chats can additionally
+   be called *Rooms*, *Conversations*, and *Channels*.
 
-   A _chat_ can have any one of many different characterizations/
+   A chat can have any one of many different characterizations/
    behaviours, called *Chat Types*:
 
-   *  *DM*: A _direct message_ _chat_ between exactly two _users_. _DMs_
-      are typically created when a _user_ searches for another _user_ to
-      message, rather than creating a _group chat_. All _users_ in the
-      _chat_ have the same permission capabilities under the _access
-      control_ semantics.  The _chat name_ is that of the opponent
-      _user_ in the _DM_. _DMs_ are typically canonical: exactly one
-      _chat_ with the opponent exists at a time.
+   *  *DM*: A direct message chat between exactly two users.  DMs are
+      typically created when a user searches for another user to
+      message, rather than creating a group chat.  All users in the chat
+      have the same permission capabilities under the access control
+      semantics.  The chat name is that of the opponent user in the DM.
+      DMs are typically canonical: exactly one chat with the opponent
+      user exists at a time.
 
-   *  *Group DM*: A subtype of _DMs_ where there are more than two
-      _users_. The _chat name_ consists of the opponent _users_ in the
-      _DM_. Inherited from _DMs_, _Group DMs_ are also canonical:
-      creating a new _Group DM_ with the exact same _users_ ultimately
-      redirects to the existing _chat_ instead of creating a new one.
-      These may also be called *Ad-hoc Chats* in some scenarios.
+   *  *Group DM*: A subtype of DMs where there are more than two users.
+      The chat name consists of the opponent users in the DM.  Inherited
+      from DMs, Group DMs are also canonical: creating a new Group DM
+      with the exact same users ultimately redirects to the existing
+      chat instead of creating a new one.  These may also be called *Ad-
+      hoc Chats* in some scenarios.
 
-   *  *Group Chat*: A _chat_ which requires an _invite_ to be able to
-      participate, and can have zero or more _users_. A _user_-provided
-      _chat name_ is defined for the _chat_. Typically, the creator has
-      _admin permissions_ while other designated _users_ have either
-      _admin permissions_ or _moderator permissions_. Most _users_ have
-      default permissions which allow them to send _events_ to the
-      _chat_. Unlike _(Group) DMs_, multiple _chats_ with the same set
-      of _users_ can exist at the same time, even with the same _chat
-      name_.
+   *  *Group Chat*: A chat which requires an invite to be able to
+      participate, and can have zero or more users.  A user-provided
+      chat name is defined for the chat.  Typically, the creator has
+      admin permissions while other designated users have either admin
+      permissions or moderator permissions.  Most users have default
+      permissions which allow them to send events to the chat.  Unlike
+      (Group) DMs, multiple chats with the same set of users can exist
+      at the same time, even with the same chat name.
 
-   *  *Public Chat*: A _group chat_ which does not require an _invite_
-      to participate.  Usually these types of _chats_ are discovered
-      through a directory or website. _Chats_ which require a request to
-      join, or _knock_, are considered _public chats_. Sometimes these
-      will be referred to as *Public Chatrooms*.
+   *  *Public Chat*: A group chat which does not require an invite to
+      participate.  Usually these types of chats are discovered through
+      a directory or website.  Chats which require a request to join, or
+      knock, are considered public chats.  Sometimes these will be
+      referred to as *Public Chatrooms*.
 
-   *  *Auditorium Chat*: Either a _group chat_ or _public chat_ where
-      most _users_ are unable to send _events_ and cannot be seen as
-      _chat members_ by other _users_. When an _event_ is sent, it may
-      appear to be sent by the _chat_ itself rather than the specific
-      _user_ who sent it.  Sometimes these are called *Auditorium
-      Rooms*.
+   *  *Auditorium Chat*: Either a group chat or public chat where most
+      users are unable to send events and cannot be seen as chat members
+      by other users.  When an event is sent, it may appear to be sent
+      by the chat itself rather than the specific user who sent it.
+      Sometimes these are called *Auditorium Rooms*.
 
-   Depending on the system, a _chat's_ _type_ can be mutable.  For
-   example, a _user_ may be permitted to introduce new _users_ to a
-   _group DM_ to implicitly convert it to a _group chat_, or they simply
-   may be unable to implicitly or explicity change the _chat type_.
+   Depending on the system, a chat's type can be mutable.  For example,
+   a user may be permitted to introduce new users to a group DM to
+   implicitly convert it to a group chat, or they simply may be unable
+   to implicitly or explicity change the chat type.
+
+   *Opponent Users*: From the perspective of a client, the users other
+   than the current user in a chat.  Typically, the current user of a
+   client will be the one which is logged in (and if a client supports
+   multiple accounts, the active session within that client instead).
 
    *Chat Name*: The title or human-focused textually distinguishing
-   factor for the _chat_. It may be automatically generated based on the
-   _chat members_.
+   factor for the chat.  It may be automatically generated based on the
+   chat members.
 
-   *Chat Avatar*: A picture or graphic associated with the _chat_,
-   usually in combination with a _chat name_. _Chat avatars_ can be
-   automatically generated based on the _chat members_.
+   *Chat Avatar*: A picture or graphic associated with the chat, usually
+   in combination with a chat name.  Chat avatars can be automatically
+   generated based on the chat members.
 
-   *Chat Member*: A joined _user_ in the _chat_. Note that this may have
-   implications on the associated _MLS Members_ in the _MLS Group_ for
-   the _user's_ _devices_.
+   *Chat Member*: A joined user in the chat.  Note that this may have
+   implications on the associated MLS Members in the MLS Group for the
+   user's devices.
 
-   *Event*: The container for an encrypted _MLS Message_, sent over the
-   wire between _servers_ and _clients_ (through their local _servers_).
-   _Events_ have an *Event ID* to canonically identify them at least
-   within the _chat_.
+   *Event*: The container for an encrypted MLS Message, sent over the
+   wire between servers and clients (through their local servers).
+   Events have an *Event ID* to canonically identify them at least
+   within the chat.
 
-   *Chat Property*: Information stored in the _chat_, such as the name,
-   topic, avatar, _chat members_, etc.  This may be in the shape of an
-   _event_. Note that _chat properties_ are different from what is
-   needed to construct an _MLS Group Context_.
+   *Chat Property*: Information stored in the chat, such as the name,
+   topic, avatar, chat members, etc.  This may be in the shape of an
+   event.  Note that chat properties are different from what is needed
+   to construct an MLS Group Context.
 
-   *Message*: Synonymous with an _MLS Message_. _Messages_ have a
-   *Message ID* to canonically identify them at least within the
-   _group_. These are essentially what a _user_ would call a "message",
-   though specifically the unencrypted portion.  When encrypted, they
-   are called _events_.
+   *Message*: Synonymous with an MLS Message.  Messages have a *Message
+   ID* to canonically identify them at least within the group.  These
+   are essentially what a user would call a "message", though
+   specifically the unencrypted portion.  When encrypted, they are
+   called events.
 
-   *Server*: Synonymous with an _MLS Delivery Service (DS)_. Responsible
-   for routing _events_ to other _servers_ and local _clients_. Note
-   that the role of a _server_ can be accomplished in the same logical
-   place as a _client_ (i.e.: in peer-to-peer environments), however the
-   default assumption if not clarified is that the _client_ and _server_
-   are two different entities.
+   *Server*: Synonymous with an MLS Delivery Service (DS).  Responsible
+   for routing events to other servers and local clients.  Note that the
+   role of a server can be accomplished in the same logical place as a
+   client (i.e.: in peer-to-peer environments), however the default
+   assumption if not clarified is that the client and server are two
+   different entities.
 
-   *Client-Server API*: The interface between a _client_ and _server_.
-   This may be nothing more than a function call if the _client_ and
-   _server_ are the same logical entity.
+   *Client-Server API*: The interface between a client and server.  This
+   may be nothing more than a function call if the client and server are
+   the same logical entity.
 
-   *Server-Server API*: The interface between a _server_ and another
-   _server_.
+   *Server-Server API*: The interface between a server and another
+   server.
 
    *Transport*: The method and format for moving information between
-   entities.  For example, a _Client-Server API_ might describe HTTPS
-   and JSON as its _transport_. For added clarity, documents should
-   clarify which API surface they are defining a _transport_ for
-   ("Server-Server Transport", for example).
+   entities.  For example, a Client-Server API might describe HTTPS and
+   JSON as its transport.  For added clarity, documents should clarify
+   which API surface they are defining a transport for ("Server-Server
+   Transport", for example).
 
-   *Message Format*: The specific format that _clients_ use within the
-   encrypted body of an _MLS Message_. Sometimes this will also be
-   called the *Content Format*.
+   *Message Format*: The specific format that clients use within the
+   encrypted body of an MLS Message.  Sometimes this will also be called
+   the *Content Format*.
 
    *Access Control*: The set of algorithms which determine whether an
-   _event_ or _MLS Message_ is permitted in the _chat_/_group_. For
-   instance, this may define whether an _MLS Proposal_ is accepted or
-   whether the _user_ is able to become a _chat member_.
+   event or MLS Message is permitted in the chat/group.  For instance,
+   this may define whether an MLS Proposal is accepted or whether the
+   user is able to become a chat member.
 
-   *Admin Permissions*: Typically at least the _user_ who created the
-   _chat_, these permissions grant the associated _users_ an ability to
-   change the permissions of other _users_ in the _chat_. The set of
-   _users_ with these permissions in a _chat_ are called *Admins*.
-   _Admin permissions_ inherit _moderator permissions_.
+   *Admin Permissions*: Typically at least the user who created the
+   chat, these permissions grant the associated users an ability to
+   change the permissions of other users in the chat.  The set of users
+   with these permissions in a chat are called *Admins*. Admin
+   permissions inherit moderator permissions.
 
-   *Moderator Permissions*: These permissions grant the associated
-   _users_ an ability to _kick_, _ban_, or otherwise restrict another
-   _user's_ ability to use the _chat_. For example, deleting a spammer's
-   _events_. The set of _users_ with these permissions in a _chat_ are
-   called *Moderators*.
+   *Moderator Permissions*: These permissions grant the associated users
+   an ability to kick, ban, or otherwise restrict another user's ability
+   to use the chat.  For example, deleting a spammer's events.  The set
+   of users with these permissions in a chat are called *Moderators*.
 
-   Note that with both _moderator permissions_ and _admin permissions_ a
-   system may have finer granularity, such as a set of _users_ being
-   able to _kick_ but not _ban_. Documents with these semantics should
-   clarify this case.
+   Note that with both moderator permissions and admin permissions a
+   system may have finer granularity, such as a set of users being able
+   to kick but not ban.  Documents with these semantics should clarify
+   this case.
 
-   *Invite*: An action taken by a _user_ in a _chat_ to encourage
-   another _user_ to become a _chat member_ (or joined to the _chat_).
-   This can be explicit through the _server-server API_, or implicit
-   with an _invite code_.
+   *Invite*: An action taken by a user in a chat to encourage another
+   user to become a chat member (or joined to the chat).  This can be
+   explicit through the server-server API, or implicit with an invite
+   code.
 
-   *Invite Code*: An out-of-band _invite_ for a _user_ to join the
-   _chat_, such as a text string shared with the target _user_. The
-   sharing mechanism can additionally be a URL or QR code.
+   *Invite Code*: An out-of-band invite for a user to join the chat,
+   such as a text string shared with the target user.  The sharing
+   mechanism can additionally be a URL or QR code.
 
-   *Direct Invite*: An invite to a _DM_ or _Group DM_. These _invites_
-   might appear in a different section of the _client's_ UI to denote
-   their semantic difference from a non-_DM_ _invite_.
+   *Direct Invite*: An invite to a DM or Group DM.  These invites might
+   appear in a different section of the client's UI to denote their
+   semantic difference from a non-DM invite.
 
-   *Kick*: An action taken by a _user_ in a _chat_ to remove another
-   _user_, assuming the sender has _moderator permissions_. The affected
-   _user_ can re-join the _chat_ with either another _invite_ or by
-   simply joining, depending on the _chat type_.
+   *Kick*: An action taken by a user in a chat to remove another user,
+   assuming the sender has moderator permissions.  The affected user can
+   re-join the chat with either another invite or by simply joining,
+   depending on the chat type.
 
-   *Ban*: Similar to _kicking_, a _user_ is _kicked_ from the room and
-   not allowed to re-join until _unbanned_ by a _moderator_. If a _user_
-   is _banned_, they are typically not able to _knock_ to get back into
-   the _chat_ either.
+   *Ban*: Similar to kicking, a user is kicked from the room and not
+   allowed to re-join until unbanned by a moderator.  If a user is
+   banned, they are typically not able to knock to get back into the
+   chat either.
 
-   *Knock*: A request from a _user_ (who is not currently a _chat
-   member_) to participate in the _chat_. Upon acceptance, the
-   requesting _user_ may receive an _invite_ or be directly joined to
-   the _chat_. Upon rejection, the requesting _user_ can be _banned_ or
-   otherwise declined.
+   *Knock*: A request from a user (who is not currently a chat member)
+   to participate in the chat.  Upon acceptance, the requesting user may
+   receive an invite or be directly joined to the chat.  Upon rejection,
+   the requesting user can be banned or otherwise declined.
 
    *Status*: Temporarily displayed text or images associated with a
-   _user's_ profile.  Instagram Stories are an example of a _user's_
-   _status_.
+   user's profile.  Instagram Stories are an example of a user's status.
 
 2.1.  Diagram Reference
 
