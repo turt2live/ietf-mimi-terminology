@@ -152,6 +152,24 @@ in the same logical place as a client (i.e.: in peer-to-peer environments), howe
 default assumption if not clarified is that the client and server are two different
 entities.
 
+**Hub Server**: The specific server responsible for routing events to other servers in the
+context of a chat. While MIMI has generally agreed that a hub server is required, some systems
+may not define such a role. Sometimes this is shortened to **Hub**.
+
+**Owning Server**: The specific server responsible for applying access control to a chat. When
+the system requires more than one (or all) servers to apply access control, there is no owning
+server. The owning server will typically be the hub server for a chat. This should NOT be
+shortened to "owner" to avoid confusion with other definitions in this document.
+
+**Server Owner**: The entity or person responsible for administrative function of the server,
+such as creating user accounts, banning/blocking chats, etc. This should NOT be shortened to
+"owner" to avoid confusion with other definitions in this document.
+
+**Server Operator**: The entity or person responsible for uptime and availability of a given
+server. This is typically the same as the server owner, though servers may be deployed to a
+shared hosting environment. The hosting provider becomes the server operator while the account
+holder with that provider becomes the server owner.
+
 **Client-Server API**: The interface between a client and server. This may be nothing more
 than a function call if the client and server are the same logical entity.
 
@@ -181,6 +199,10 @@ a spammer's events. The set of users with these permissions in a chat are called
 Note that with both moderator permissions and admin permissions a system may have finer
 granularity, such as a set of users being able to kick but not ban. Documents with these
 semantics should clarify this case.
+
+**Chat Owners**: Users in a chat with superuser-like or above-admin permissions. Not all
+systems support this concept, instead only going as high as admin permissions. This should
+NOT be shortened to "owner" to avoid confusion with other definitions in this document.
 
 **Invite**: An action taken by a user in a chat to encourage another user to become a
 chat member (or joined to the chat). This can be explicit through the server-server API,
