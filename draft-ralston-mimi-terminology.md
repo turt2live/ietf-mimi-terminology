@@ -63,8 +63,7 @@ described in this document or from MLS.
 MIMI defines:
 
 **Messaging Provider** or **Provider**: A service offering instant messaging to users.
-Typically a provider will have a server to route events between users (or clients,
-specifically).
+Each provider has a server to route events between users (or clients, specifically).
 
 **User**: A (normally) human operator of a client. Users have a **User ID** to identify
 them canonically within the system.
@@ -151,6 +150,9 @@ to other servers and local clients. Note that the role of a server can be accomp
 in the same logical place as a client (i.e.: in peer-to-peer environments), however the
 default assumption if not clarified is that the client and server are two different
 entities.
+
+**Hub Server**: The specific server responsible for routing events to other servers in the
+context of a chat. Sometimes this is shortened to **Hub**.
 
 **Client-Server API**: The interface between a client and server. This may be nothing more
 than a function call if the client and server are the same logical entity.
