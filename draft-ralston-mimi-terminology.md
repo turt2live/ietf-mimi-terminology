@@ -50,9 +50,9 @@ to have a shared understanding for what is being discussed specifically.
 
 This document expands upon MLS's {{!I-D.ietf-mls-protocol}} {{!I-D.ietf-mls-architecture}}
 terminology by defining terms specific to MIMI's purpose. Document authors SHOULD prefix
-terms from the MLS specification with "MLS" to denote that the term is specifically coming
-from the MLS specification. For example, "MLS Group" versus "Group". This document defines
-terms which are non-conflicting to help ensure clarity when the MLS prefix is missing, however.
+terms from MLS with "MLS" to denote where the term is specifically coming from. For example,
+"MLS Group" versus "Group". This document defines terms which are non-conflicting to help
+ensure clarity when the MLS prefix is missing, however.
 
 Documents within the MIMI working group may introduce their own terminology to explain
 concepts within their context. Those documents SHOULD NOT override or change the terminology
