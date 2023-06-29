@@ -146,11 +146,8 @@ what is needed to construct an MLS Group Context.
 identify them at least within the group. These are essentially what a user would call a
 "message", though specifically the unencrypted portion. When encrypted, they are called events.
 
-**Server**: Responsible for routing events
-to other servers and local clients. Note that the role of a server can be accomplished
-in the same logical place as a client (i.e.: in peer-to-peer environments), however the
-default assumption if not clarified is that the client and server are two different
-entities.
+**Server**: Responsible for routing events to other servers and local clients. The collection
+of servers and clients in a chat form the MLS Delivery Service (DS).
 
 **Client-Server API**: The interface between a client and server. This may be nothing more
 than a function call if the client and server are the same logical entity.
