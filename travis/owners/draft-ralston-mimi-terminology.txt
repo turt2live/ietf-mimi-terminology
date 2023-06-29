@@ -4,8 +4,8 @@
 
 More Instant Messaging Interoperability                       T. Ralston
 Internet-Draft                          The Matrix.org Foundation C.I.C.
-Intended status: Informational                              28 June 2023
-Expires: 30 December 2023
+Intended status: Informational                              29 June 2023
+Expires: 31 December 2023
 
 
                             MIMI Terminology
@@ -48,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 30 December 2023.
+   This Internet-Draft will expire on 31 December 2023.
 
 Copyright Notice
 
@@ -99,8 +99,8 @@ Table of Contents
    MIMI defines:
 
    *Messaging Provider* or *Provider*: A service offering instant
-   messaging to users.  Typically a provider will have a server to route
-   events between users (or clients, specifically).
+   messaging to users.  Each provider has a server to route events
+   between users (or clients, specifically).
 
    *User*: A (normally) human operator of a client.  Users have a *User
    ID* to identify them canonically within the system.
@@ -209,27 +209,8 @@ Table of Contents
    different entities.
 
    *Hub Server*: The specific server responsible for routing events to
-   other servers in the context of a chat.  While MIMI has generally
-   agreed that a hub server is required, some systems may not define
-   such a role.  Sometimes this is shortened to *Hub*.
-
-   *Owning Server*: The specific server responsible for applying access
-   control to a chat.  When the system requires more than one (or all)
-   servers to apply access control, there is no owning server.  The
-   owning server will typically be the hub server for a chat.  This
-   should NOT be shortened to "owner" to avoid confusion with other
-   definitions in this document.
-
-   *Server Owner*: The entity or person responsible for administrative
-   function of the server, such as creating user accounts, banning/
-   blocking chats, etc.  This should NOT be shortened to "owner" to
-   avoid confusion with other definitions in this document.
-
-   *Server Operator*: The entity or person responsible for uptime and
-   availability of a given server.  This is typically the same as the
-   server owner, though servers may be deployed to a shared hosting
-   environment.  The hosting provider becomes the server operator while
-   the account holder with that provider becomes the server owner.
+   other servers in the context of a chat.  Sometimes this is shortened
+   to *Hub*.
 
    *Client-Server API*: The interface between a client and server.  This
    may be nothing more than a function call if the client and server are
@@ -268,11 +249,6 @@ Table of Contents
    system may have finer granularity, such as a set of users being able
    to kick but not ban.  Documents with these semantics should clarify
    this case.
-
-   *Chat Owners*: Users in a chat with superuser-like or above-admin
-   permissions.  Not all systems support this concept, instead only
-   going as high as admin permissions.  This should NOT be shortened to
-   "owner" to avoid confusion with other definitions in this document.
 
    *Invite*: An action taken by a user in a chat to encourage another
    user to become a chat member (or joined to the chat).  This can be
