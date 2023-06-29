@@ -1054,7 +1054,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Ralston</td>
-<td class="center">Expires 29 December 2023</td>
+<td class="center">Expires 31 December 2023</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1067,12 +1067,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ralston-mimi-terminology-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2023-06-27" class="published">27 June 2023</time>
+<time datetime="2023-06-29" class="published">29 June 2023</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2023-12-29">29 December 2023</time></dd>
+<dd class="expires"><time datetime="2023-12-31">31 December 2023</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1123,7 +1123,7 @@ concepts within MIMI.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 29 December 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 31 December 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1202,8 +1202,7 @@ described in this document or from MLS.<a href="#section-1-3" class="pilcrow">¶
       </h2>
 <p id="section-2-1">MIMI defines:<a href="#section-2-1" class="pilcrow">¶</a></p>
 <p id="section-2-2"><strong>Messaging Provider</strong> or <strong>Provider</strong>: A service offering instant messaging to users.
-Typically a provider will have a server to route events between users (or clients,
-specifically).<a href="#section-2-2" class="pilcrow">¶</a></p>
+Each provider has a server to route events between users (or clients, specifically).<a href="#section-2-2" class="pilcrow">¶</a></p>
 <p id="section-2-3"><strong>User</strong>: A (normally) human operator of a client. Users have a <strong>User ID</strong> to identify
 them canonically within the system.<a href="#section-2-3" class="pilcrow">¶</a></p>
 <p id="section-2-4"><strong>User Identity</strong>: A mapping of <strong>User ID</strong> to external identifier, such as a phone number.
@@ -1283,46 +1282,48 @@ to other servers and local clients. Note that the role of a server can be accomp
 in the same logical place as a client (i.e.: in peer-to-peer environments), however the
 default assumption if not clarified is that the client and server are two different
 entities.<a href="#section-2-17" class="pilcrow">¶</a></p>
-<p id="section-2-18"><strong>Client-Server API</strong>: The interface between a client and server. This may be nothing more
-than a function call if the client and server are the same logical entity.<a href="#section-2-18" class="pilcrow">¶</a></p>
-<p id="section-2-19"><strong>Server-Server API</strong>: The interface between a server and another server.<a href="#section-2-19" class="pilcrow">¶</a></p>
-<p id="section-2-20"><strong>Transport</strong>: The method and format for moving information between entities. For example,
+<p id="section-2-18"><strong>Hub Server</strong>: The specific server responsible for routing events to other servers in the
+context of a chat. Sometimes this is shortened to <strong>Hub</strong>.<a href="#section-2-18" class="pilcrow">¶</a></p>
+<p id="section-2-19"><strong>Client-Server API</strong>: The interface between a client and server. This may be nothing more
+than a function call if the client and server are the same logical entity.<a href="#section-2-19" class="pilcrow">¶</a></p>
+<p id="section-2-20"><strong>Server-Server API</strong>: The interface between a server and another server.<a href="#section-2-20" class="pilcrow">¶</a></p>
+<p id="section-2-21"><strong>Transport</strong>: The method and format for moving information between entities. For example,
 a Client-Server API might describe HTTPS and JSON as its transport. For added clarity,
 documents should clarify which API surface they are defining a transport for ("Server-Server
-Transport", for example).<a href="#section-2-20" class="pilcrow">¶</a></p>
-<p id="section-2-21"><strong>Message Format</strong>: The specific format that clients use within the encrypted body of an
-MLS Message. Sometimes this will also be called the <strong>Content Format</strong>.<a href="#section-2-21" class="pilcrow">¶</a></p>
-<p id="section-2-22"><strong>Access Control</strong>: The set of algorithms which determine whether an event or MLS Message
+Transport", for example).<a href="#section-2-21" class="pilcrow">¶</a></p>
+<p id="section-2-22"><strong>Message Format</strong>: The specific format that clients use within the encrypted body of an
+MLS Message. Sometimes this will also be called the <strong>Content Format</strong>.<a href="#section-2-22" class="pilcrow">¶</a></p>
+<p id="section-2-23"><strong>Access Control</strong>: The set of algorithms which determine whether an event or MLS Message
 is permitted in the chat/group. For instance, this may define whether an MLS Proposal
-is accepted or whether the user is able to become a chat member.<a href="#section-2-22" class="pilcrow">¶</a></p>
-<p id="section-2-23"><strong>Admin Permissions</strong>: Typically at least the user who created the chat, these permissions
+is accepted or whether the user is able to become a chat member.<a href="#section-2-23" class="pilcrow">¶</a></p>
+<p id="section-2-24"><strong>Admin Permissions</strong>: Typically at least the user who created the chat, these permissions
 grant the associated users an ability to change the permissions of other users in the chat.
 The set of users with these permissions in a chat are called <strong>Admins</strong>. Admin permissions
-inherit moderator permissions.<a href="#section-2-23" class="pilcrow">¶</a></p>
-<p id="section-2-24"><strong>Moderator Permissions</strong>: These permissions grant the associated users an ability to kick,
+inherit moderator permissions.<a href="#section-2-24" class="pilcrow">¶</a></p>
+<p id="section-2-25"><strong>Moderator Permissions</strong>: These permissions grant the associated users an ability to kick,
 ban, or otherwise restrict another user's ability to use the chat. For example, deleting
-a spammer's events. The set of users with these permissions in a chat are called <strong>Moderators</strong>.<a href="#section-2-24" class="pilcrow">¶</a></p>
-<p id="section-2-25">Note that with both moderator permissions and admin permissions a system may have finer
+a spammer's events. The set of users with these permissions in a chat are called <strong>Moderators</strong>.<a href="#section-2-25" class="pilcrow">¶</a></p>
+<p id="section-2-26">Note that with both moderator permissions and admin permissions a system may have finer
 granularity, such as a set of users being able to kick but not ban. Documents with these
-semantics should clarify this case.<a href="#section-2-25" class="pilcrow">¶</a></p>
-<p id="section-2-26"><strong>Invite</strong>: An action taken by a user in a chat to encourage another user to become a
+semantics should clarify this case.<a href="#section-2-26" class="pilcrow">¶</a></p>
+<p id="section-2-27"><strong>Invite</strong>: An action taken by a user in a chat to encourage another user to become a
 chat member (or joined to the chat). This can be explicit through the server-server API,
-or implicit with an invite code.<a href="#section-2-26" class="pilcrow">¶</a></p>
-<p id="section-2-27"><strong>Invite Code</strong>: An out-of-band invite for a user to join the chat, such as a text string
-shared with the target user. The sharing mechanism can additionally be a URL or QR code.<a href="#section-2-27" class="pilcrow">¶</a></p>
-<p id="section-2-28"><strong>Direct Invite</strong>: An invite to a DM or Group DM. These invites might appear in a different
-section of the client's UI to denote their semantic difference from a non-DM invite.<a href="#section-2-28" class="pilcrow">¶</a></p>
-<p id="section-2-29"><strong>Kick</strong>: An action taken by a user in a chat to remove another user, assuming the sender
+or implicit with an invite code.<a href="#section-2-27" class="pilcrow">¶</a></p>
+<p id="section-2-28"><strong>Invite Code</strong>: An out-of-band invite for a user to join the chat, such as a text string
+shared with the target user. The sharing mechanism can additionally be a URL or QR code.<a href="#section-2-28" class="pilcrow">¶</a></p>
+<p id="section-2-29"><strong>Direct Invite</strong>: An invite to a DM or Group DM. These invites might appear in a different
+section of the client's UI to denote their semantic difference from a non-DM invite.<a href="#section-2-29" class="pilcrow">¶</a></p>
+<p id="section-2-30"><strong>Kick</strong>: An action taken by a user in a chat to remove another user, assuming the sender
 has moderator permissions. The affected user can re-join the chat with either another invite
-or by simply joining, depending on the chat type.<a href="#section-2-29" class="pilcrow">¶</a></p>
-<p id="section-2-30"><strong>Ban</strong>: Similar to kicking, a user is kicked from the room and not allowed to re-join
+or by simply joining, depending on the chat type.<a href="#section-2-30" class="pilcrow">¶</a></p>
+<p id="section-2-31"><strong>Ban</strong>: Similar to kicking, a user is kicked from the room and not allowed to re-join
 until unbanned by a moderator. If a user is banned, they are typically not able to
-knock to get back into the chat either.<a href="#section-2-30" class="pilcrow">¶</a></p>
-<p id="section-2-31"><strong>Knock</strong>: A request from a user (who is not currently a chat member) to participate in the
+knock to get back into the chat either.<a href="#section-2-31" class="pilcrow">¶</a></p>
+<p id="section-2-32"><strong>Knock</strong>: A request from a user (who is not currently a chat member) to participate in the
 chat. Upon acceptance, the requesting user may receive an invite or be directly joined to
-the chat. Upon rejection, the requesting user can be banned or otherwise declined.<a href="#section-2-31" class="pilcrow">¶</a></p>
-<p id="section-2-32"><strong>Status</strong>: Temporarily displayed text or images associated with a user's profile. Instagram
-Stories are an example of a user's status.<a href="#section-2-32" class="pilcrow">¶</a></p>
+the chat. Upon rejection, the requesting user can be banned or otherwise declined.<a href="#section-2-32" class="pilcrow">¶</a></p>
+<p id="section-2-33"><strong>Status</strong>: Temporarily displayed text or images associated with a user's profile. Instagram
+Stories are an example of a user's status.<a href="#section-2-33" class="pilcrow">¶</a></p>
 <div id="diagram-reference">
 <section id="section-2.1">
         <h3 id="name-diagram-reference">

@@ -4,8 +4,8 @@
 
 More Instant Messaging Interoperability                       T. Ralston
 Internet-Draft                          The Matrix.org Foundation C.I.C.
-Intended status: Informational                              27 June 2023
-Expires: 29 December 2023
+Intended status: Informational                              29 June 2023
+Expires: 31 December 2023
 
 
                             MIMI Terminology
@@ -48,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 December 2023.
+   This Internet-Draft will expire on 31 December 2023.
 
 Copyright Notice
 
@@ -99,8 +99,8 @@ Table of Contents
    MIMI defines:
 
    *Messaging Provider* or *Provider*: A service offering instant
-   messaging to users.  Typically a provider will have a server to route
-   events between users (or clients, specifically).
+   messaging to users.  Each provider has a server to route events
+   between users (or clients, specifically).
 
    *User*: A (normally) human operator of a client.  Users have a *User
    ID* to identify them canonically within the system.
@@ -207,6 +207,10 @@ Table of Contents
    client (i.e.: in peer-to-peer environments), however the default
    assumption if not clarified is that the client and server are two
    different entities.
+
+   *Hub Server*: The specific server responsible for routing events to
+   other servers in the context of a chat.  Sometimes this is shortened
+   to *Hub*.
 
    *Client-Server API*: The interface between a client and server.  This
    may be nothing more than a function call if the client and server are
