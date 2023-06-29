@@ -1308,22 +1308,24 @@ granularity, such as a set of users being able to kick but not ban. Documents wi
 semantics should clarify this case.<a href="#section-2-26" class="pilcrow">¶</a></p>
 <p id="section-2-27"><strong>Invite</strong>: An action taken by a user in a chat to encourage another user to become a
 chat member (or joined to the chat). This can be explicit through the server-server API,
-or implicit with an invite code.<a href="#section-2-27" class="pilcrow">¶</a></p>
-<p id="section-2-28"><strong>Invite Code</strong>: An out-of-band invite for a user to join the chat, such as a text string
-shared with the target user. The sharing mechanism can additionally be a URL or QR code.<a href="#section-2-28" class="pilcrow">¶</a></p>
-<p id="section-2-29"><strong>Direct Invite</strong>: An invite to a DM or Group DM. These invites might appear in a different
-section of the client's UI to denote their semantic difference from a non-DM invite.<a href="#section-2-29" class="pilcrow">¶</a></p>
-<p id="section-2-30"><strong>Kick</strong>: An action taken by a user in a chat to remove another user, assuming the sender
+or implicit with an invite link/join code.<a href="#section-2-27" class="pilcrow">¶</a></p>
+<p id="section-2-28"><strong>Invite Link</strong>: An out-of-band invite for a user to join the chat, represented as a URL
+or QR code.<a href="#section-2-28" class="pilcrow">¶</a></p>
+<p id="section-2-29"><strong>Join Code</strong> or <strong>Join Password</strong>: A text-based string a user may enter to join a chat.
+The string may be shared with the user verbatim or encoded with a QR code, for example.<a href="#section-2-29" class="pilcrow">¶</a></p>
+<p id="section-2-30"><strong>Direct Invite</strong>: An invite to a DM or Group DM. These invites might appear in a different
+section of the client's UI to denote their semantic difference from a non-DM invite.<a href="#section-2-30" class="pilcrow">¶</a></p>
+<p id="section-2-31"><strong>Kick</strong>: An action taken by a user in a chat to remove another user, assuming the sender
 has moderator permissions. The affected user can re-join the chat with either another invite
-or by simply joining, depending on the chat type.<a href="#section-2-30" class="pilcrow">¶</a></p>
-<p id="section-2-31"><strong>Ban</strong>: Similar to kicking, a user is kicked from the room and not allowed to re-join
+or by simply joining, depending on the chat type.<a href="#section-2-31" class="pilcrow">¶</a></p>
+<p id="section-2-32"><strong>Ban</strong>: Similar to kicking, a user is kicked from the room and not allowed to re-join
 until unbanned by a moderator. If a user is banned, they are typically not able to
-knock to get back into the chat either.<a href="#section-2-31" class="pilcrow">¶</a></p>
-<p id="section-2-32"><strong>Knock</strong>: A request from a user (who is not currently a chat member) to participate in the
+knock to get back into the chat either.<a href="#section-2-32" class="pilcrow">¶</a></p>
+<p id="section-2-33"><strong>Knock</strong>: A request from a user (who is not currently a chat member) to participate in the
 chat. Upon acceptance, the requesting user may receive an invite or be directly joined to
-the chat. Upon rejection, the requesting user can be banned or otherwise declined.<a href="#section-2-32" class="pilcrow">¶</a></p>
-<p id="section-2-33"><strong>Status</strong>: Temporarily displayed text or images associated with a user's profile. Instagram
-Stories are an example of a user's status.<a href="#section-2-33" class="pilcrow">¶</a></p>
+the chat. Upon rejection, the requesting user can be banned or otherwise declined.<a href="#section-2-33" class="pilcrow">¶</a></p>
+<p id="section-2-34"><strong>Status</strong>: Temporarily displayed text or images associated with a user's profile. Instagram
+Stories are an example of a user's status.<a href="#section-2-34" class="pilcrow">¶</a></p>
 <div id="diagram-reference">
 <section id="section-2.1">
         <h3 id="name-diagram-reference">
