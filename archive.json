@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-06-27T00:03:23.315121+00:00",
+  "timestamp": "2023-06-29T00:03:23.161227+00:00",
   "repo": "turt2live/ietf-mimi-terminology",
   "labels": [
     {
@@ -49,6 +49,112 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
-  "pulls": []
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOJRNLIs5p8aaf",
+      "title": "Opponent",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/issues/1",
+      "state": "CLOSED",
+      "author": "coopdanger",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Opponent / opponent user should probably be defined. Or maybe there is a better term for it?",
+      "createdAt": "2023-06-27T17:39:20Z",
+      "updatedAt": "2023-06-27T20:52:23Z",
+      "closedAt": "2023-06-27T20:52:23Z",
+      "comments": [
+        {
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "body": "To check, opponent being the second person in a DM or when being invited?",
+          "createdAt": "2023-06-27T18:16:52Z",
+          "updatedAt": "2023-06-27T18:16:52Z"
+        },
+        {
+          "author": "coopdanger",
+          "authorAssociation": "NONE",
+          "body": "Yes, as the term is used in the existing definitions of DM and group DM.",
+          "createdAt": "2023-06-27T18:25:33Z",
+          "updatedAt": "2023-06-27T18:25:33Z"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOJRNLIs5p9ltx",
+      "title": "Hub",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/issues/2",
+      "state": "OPEN",
+      "author": "coopdanger",
+      "authorAssociation": "NONE",
+      "assignees": [
+        "turt2live"
+      ],
+      "labels": [],
+      "body": "Hub / hub server / owner / owning server should probably be defined here.",
+      "createdAt": "2023-06-27T21:05:29Z",
+      "updatedAt": "2023-06-28T23:43:26Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 3,
+      "id": "PR_kwDOJRNLIs5UMYIx",
+      "title": "Define every possible iteration of \"owner\"",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/pull/3",
+      "state": "OPEN",
+      "author": "turt2live",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixes https://github.com/turt2live/ietf-mimi-terminology/issues/2",
+      "createdAt": "2023-06-28T23:38:33Z",
+      "updatedAt": "2023-06-28T23:43:14Z",
+      "baseRepository": "turt2live/ietf-mimi-terminology",
+      "baseRefName": "main",
+      "baseRefOid": "3e7a4ecbed11c130630f676056466f738a64a1f5",
+      "headRepository": "turt2live/ietf-mimi-terminology",
+      "headRefName": "travis/owners",
+      "headRefOid": "558c5523afcef756b94af0170e2daf380a3c32c7",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "body": "@coopdanger please take a look - these definitions are potentially controversial in nature ",
+          "createdAt": "2023-06-28T23:43:14Z",
+          "updatedAt": "2023-06-28T23:43:14Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOJRNLIs5ZqvjN",
+          "commit": {
+            "abbreviatedOid": "558c552"
+          },
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-06-28T23:41:38Z",
+          "updatedAt": "2023-06-28T23:41:38Z",
+          "comments": [
+            {
+              "originalPosition": 20,
+              "body": "It's fairly unlikely that hosting providers for MIMI implementations/transports will sprout up (it just doesn't make sense), but it feels distinct enough from server owners to be worth writing down.",
+              "createdAt": "2023-06-28T23:41:38Z",
+              "updatedAt": "2023-06-28T23:41:38Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
