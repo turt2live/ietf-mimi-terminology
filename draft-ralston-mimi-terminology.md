@@ -186,10 +186,13 @@ semantics should clarify this case.
 
 **Invite**: An action taken by a user in a chat to encourage another user to become a
 chat member (or joined to the chat). This can be explicit through the server-server API,
-or implicit with an invite code.
+or implicit with an invite link/join code.
 
-**Invite Code**: An out-of-band invite for a user to join the chat, such as a text string
-shared with the target user. The sharing mechanism can additionally be a URL or QR code.
+**Invite Link**: An out-of-band invite for a user to join the chat, represented as a URL
+or QR code.
+
+**Join Code** or **Join Password**: A text-based string a user may enter to join a chat.
+The string may be shared with the user verbatim or encoded with a QR code, for example.
 
 **Direct Invite**: An invite to a DM or Group DM. These invites might appear in a different
 section of the client's UI to denote their semantic difference from a non-DM invite.
