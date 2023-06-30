@@ -145,11 +145,8 @@ what is needed to construct an MLS Group Context.
 identify them at least within the group. These are essentially what a user would call a
 "message", though specifically the unencrypted portion. When encrypted, they are called events.
 
-**Server**: Synonymous with an MLS Delivery Service (DS). Responsible for routing events
-to other servers and local clients. Note that the role of a server can be accomplished
-in the same logical place as a client (i.e.: in peer-to-peer environments), however the
-default assumption if not clarified is that the client and server are two different
-entities.
+**Server**: Responsible for routing events to other servers and local clients. The collection
+of servers and clients in a chat form the MLS Delivery Service (DS).
 
 **Hub Server**: The specific server responsible for routing events to other servers in the
 context of a chat. Sometimes this is shortened to **Hub**.
