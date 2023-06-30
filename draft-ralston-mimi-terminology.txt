@@ -4,8 +4,8 @@
 
 More Instant Messaging Interoperability                       T. Ralston
 Internet-Draft                          The Matrix.org Foundation C.I.C.
-Intended status: Informational                              29 June 2023
-Expires: 31 December 2023
+Intended status: Informational                              30 June 2023
+Expires: 1 January 2024
 
 
                             MIMI Terminology
@@ -48,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 December 2023.
+   This Internet-Draft will expire on 1 January 2024.
 
 Copyright Notice
 
@@ -201,12 +201,9 @@ Table of Contents
    specifically the unencrypted portion.  When encrypted, they are
    called events.
 
-   *Server*: Synonymous with an MLS Delivery Service (DS).  Responsible
-   for routing events to other servers and local clients.  Note that the
-   role of a server can be accomplished in the same logical place as a
-   client (i.e.: in peer-to-peer environments), however the default
-   assumption if not clarified is that the client and server are two
-   different entities.
+   *Server*: Responsible for routing events to other servers and local
+   clients.  The collection of servers and clients in a chat form the
+   MLS Delivery Service (DS).
 
    *Hub Server*: The specific server responsible for routing events to
    other servers in the context of a chat.  Sometimes this is shortened
