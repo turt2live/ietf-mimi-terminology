@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-07-02T00:03:43.709371+00:00",
+  "timestamp": "2023-07-06T00:03:24.467026+00:00",
   "repo": "turt2live/ietf-mimi-terminology",
   "labels": [
     {
@@ -199,6 +199,30 @@
       "updatedAt": "2023-06-29T16:41:41Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 10,
+      "id": "I_kwDOJRNLIs5qsR5G",
+      "title": "Is it a \"Server-Server API\" or \"Server-Server Protocol\"?",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/issues/10",
+      "state": "OPEN",
+      "author": "turt2live",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Same applies for Client-Server API.",
+      "createdAt": "2023-07-05T17:30:13Z",
+      "updatedAt": "2023-07-05T20:12:41Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "body": "having thought about it: it's both, depending on context.",
+          "createdAt": "2023-07-05T20:12:40Z",
+          "updatedAt": "2023-07-05T20:12:40Z"
+        }
+      ]
     }
   ],
   "pulls": [
