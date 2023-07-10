@@ -4,8 +4,8 @@
 
 More Instant Messaging Interoperability                       T. Ralston
 Internet-Draft                          The Matrix.org Foundation C.I.C.
-Intended status: Informational                              30 June 2023
-Expires: 1 January 2024
+Intended status: Informational                              10 July 2023
+Expires: 11 January 2024
 
 
                             MIMI Terminology
@@ -48,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 January 2024.
+   This Internet-Draft will expire on 11 January 2024.
 
 Copyright Notice
 
@@ -208,6 +208,11 @@ Table of Contents
    *Hub Server*: The specific server responsible for routing events to
    other servers in the context of a chat.  Sometimes this is shortened
    to *Hub*.
+
+   *Owning Server*: If applicable, the server specifically responsible
+   for applying access control to a chat.  Typically, this will also be
+   the hub server for the room.  This should _not_ be shortened to
+   "owner" to avoid confusion with other related concepts.
 
    *Client-Server API*: The interface between a client and server.  This
    may be nothing more than a function call if the client and server are
