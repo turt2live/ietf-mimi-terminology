@@ -151,6 +151,10 @@ of servers and clients in a chat form the MLS Delivery Service (DS).
 **Hub Server**: The specific server responsible for routing events to other servers in the
 context of a chat. Sometimes this is shortened to **Hub**.
 
+**Owning Server**: If applicable, the server specifically responsible for applying access
+control to a chat. Typically, this will also be the hub server for the room. This should *not*
+be shortened to "owner" to avoid confusion with other related concepts.
+
 **Client-Server API**: The interface between a client and server. This may be nothing more
 than a function call if the client and server are the same logical entity.
 
