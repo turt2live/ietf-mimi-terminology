@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-07-09T00:03:30.980045+00:00",
+  "timestamp": "2023-07-11T00:03:39.004952+00:00",
   "repo": "turt2live/ietf-mimi-terminology",
   "labels": [
     {
@@ -125,7 +125,7 @@
       "id": "I_kwDOJRNLIs5qKqFE",
       "title": "To discuss: Owning Server",
       "url": "https://github.com/turt2live/ietf-mimi-terminology/issues/6",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "turt2live",
       "authorAssociation": "OWNER",
       "assignees": [],
@@ -134,8 +134,8 @@
       ],
       "body": "**Owning Server**: The specific server responsible for applying access control to a chat. When the system requires more than one (or all) servers to apply access control, there is no owning server. The owning server will typically be the hub server for a chat. This should NOT be shortened to \"owner\" to avoid confusion with other definitions in this document.\r\n\r\n----\r\n\r\nFrom https://github.com/turt2live/ietf-mimi-terminology/pull/3/commits/558c5523afcef756b94af0170e2daf380a3c32c7",
       "createdAt": "2023-06-29T16:39:44Z",
-      "updatedAt": "2023-06-29T16:39:44Z",
-      "closedAt": null,
+      "updatedAt": "2023-07-10T16:40:51Z",
+      "closedAt": "2023-07-10T16:40:51Z",
       "comments": []
     },
     {
@@ -406,6 +406,34 @@
           ]
         }
       ]
+    },
+    {
+      "number": 11,
+      "id": "PR_kwDOJRNLIs5VGhjx",
+      "title": "Add \"owning server\"",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/pull/11",
+      "state": "MERGED",
+      "author": "turt2live",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixes https://github.com/turt2live/ietf-mimi-terminology/issues/6\r\n\r\n[Rendered: HTML](https://turt2live.github.io/ietf-mimi-terminology/travis/owning-server/draft-ralston-mimi-terminology.html)\r\n[Rendered: plain text](https://turt2live.github.io/ietf-mimi-terminology/travis/owning-server/draft-ralston-mimi-terminology.txt)",
+      "createdAt": "2023-07-10T15:49:25Z",
+      "updatedAt": "2023-07-10T16:40:53Z",
+      "baseRepository": "turt2live/ietf-mimi-terminology",
+      "baseRefName": "main",
+      "baseRefOid": "fede4130267041d2b0dfac87cb1459d4d3f9a334",
+      "headRepository": "turt2live/ietf-mimi-terminology",
+      "headRefName": "travis/owning-server",
+      "headRefOid": "4250d79277547801bf67e0554e576268b7f7cabb",
+      "closedAt": "2023-07-10T16:40:50Z",
+      "mergedAt": "2023-07-10T16:40:50Z",
+      "mergedBy": "turt2live",
+      "mergeCommit": {
+        "oid": "f67c23331d0329431eb3e39b291c069222939fe5"
+      },
+      "comments": [],
+      "reviews": []
     }
   ]
 }
