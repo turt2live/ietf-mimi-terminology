@@ -1,0 +1,439 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2023-07-11T00:03:39.004952+00:00",
+  "repo": "turt2live/ietf-mimi-terminology",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    },
+    {
+      "name": "not used by working group",
+      "description": "The WG might use this definition, but doesn't currently. Close if it serves no purpose at all.",
+      "color": "e99695"
+    }
+  ],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOJRNLIs5p8aaf",
+      "title": "Opponent",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/issues/1",
+      "state": "CLOSED",
+      "author": "coopdanger",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Opponent / opponent user should probably be defined. Or maybe there is a better term for it?",
+      "createdAt": "2023-06-27T17:39:20Z",
+      "updatedAt": "2023-06-27T20:52:23Z",
+      "closedAt": "2023-06-27T20:52:23Z",
+      "comments": [
+        {
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "body": "To check, opponent being the second person in a DM or when being invited?",
+          "createdAt": "2023-06-27T18:16:52Z",
+          "updatedAt": "2023-06-27T18:16:52Z"
+        },
+        {
+          "author": "coopdanger",
+          "authorAssociation": "NONE",
+          "body": "Yes, as the term is used in the existing definitions of DM and group DM.",
+          "createdAt": "2023-06-27T18:25:33Z",
+          "updatedAt": "2023-06-27T18:25:33Z"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOJRNLIs5p9ltx",
+      "title": "Hub",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/issues/2",
+      "state": "CLOSED",
+      "author": "coopdanger",
+      "authorAssociation": "NONE",
+      "assignees": [
+        "turt2live"
+      ],
+      "labels": [],
+      "body": "Hub / hub server / owner / owning server should probably be defined here.",
+      "createdAt": "2023-06-27T21:05:29Z",
+      "updatedAt": "2023-06-29T16:42:12Z",
+      "closedAt": "2023-06-29T16:42:12Z",
+      "comments": []
+    },
+    {
+      "number": 5,
+      "id": "I_kwDOJRNLIs5qF6Yc",
+      "title": "\"Invite code\" does not seem consistent with industry norms",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/issues/5",
+      "state": "CLOSED",
+      "author": "rohan-wire",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Hi,\r\nI think \"Invite code\" is being used to describe two things which are very different and combining these does not conceptually reflect industry or user expectations.\r\n\r\n1) There are things that you can use to find or join a room/chat. I call these join link or joining links. I would propose **invite link** or **join link**.\r\n\r\n2) There are passwords or codes which are entered or scanned once you reach a particular screen. I would call this a **join password or code**\r\n\r\nA QR code can encode either of these two things. ",
+      "createdAt": "2023-06-29T00:28:37Z",
+      "updatedAt": "2023-06-29T16:55:02Z",
+      "closedAt": "2023-06-29T16:55:02Z",
+      "comments": []
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOJRNLIs5qKqFE",
+      "title": "To discuss: Owning Server",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/issues/6",
+      "state": "CLOSED",
+      "author": "turt2live",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [
+        "not used by working group"
+      ],
+      "body": "**Owning Server**: The specific server responsible for applying access control to a chat. When the system requires more than one (or all) servers to apply access control, there is no owning server. The owning server will typically be the hub server for a chat. This should NOT be shortened to \"owner\" to avoid confusion with other definitions in this document.\r\n\r\n----\r\n\r\nFrom https://github.com/turt2live/ietf-mimi-terminology/pull/3/commits/558c5523afcef756b94af0170e2daf380a3c32c7",
+      "createdAt": "2023-06-29T16:39:44Z",
+      "updatedAt": "2023-07-10T16:40:51Z",
+      "closedAt": "2023-07-10T16:40:51Z",
+      "comments": []
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOJRNLIs5qKqSV",
+      "title": "To discuss: Server Owner",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/issues/7",
+      "state": "OPEN",
+      "author": "turt2live",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [
+        "not used by working group"
+      ],
+      "body": "**Server Owner**: The entity or person responsible for administrative function of the server, such as creating user accounts, banning/blocking chats, etc. This should NOT be shortened to \"owner\" to avoid confusion with other definitions in this document.\r\n\r\n----\r\n\r\nFrom https://github.com/turt2live/ietf-mimi-terminology/pull/3/commits/558c5523afcef756b94af0170e2daf380a3c32c7",
+      "createdAt": "2023-06-29T16:40:17Z",
+      "updatedAt": "2023-06-29T16:40:17Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 8,
+      "id": "I_kwDOJRNLIs5qKqc7",
+      "title": "To discuss: Server Operator",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/issues/8",
+      "state": "OPEN",
+      "author": "turt2live",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [
+        "not used by working group"
+      ],
+      "body": "**Server Operator**: The entity or person responsible for uptime and availability of a given server. This is typically the same as the server owner, though servers may be deployed to a shared hosting environment. The hosting provider becomes the server operator while the account holder with that provider becomes the server owner.\r\n\r\n----\r\n\r\nFrom https://github.com/turt2live/ietf-mimi-terminology/pull/3/commits/558c5523afcef756b94af0170e2daf380a3c32c7\r\n",
+      "createdAt": "2023-06-29T16:40:50Z",
+      "updatedAt": "2023-06-29T16:40:58Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "body": "It's fairly unlikely that hosting providers for MIMI implementations/transports will sprout up (it just doesn't make sense), but it feels distinct enough from server owners to be worth writing down.",
+          "createdAt": "2023-06-29T16:40:57Z",
+          "updatedAt": "2023-06-29T16:40:57Z"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOJRNLIs5qKqsl",
+      "title": "To discuss: Chat Owner",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/issues/9",
+      "state": "OPEN",
+      "author": "turt2live",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [
+        "not used by working group"
+      ],
+      "body": "**Chat Owners**: Users in a chat with superuser-like or above-admin permissions. Not all systems support this concept, instead only going as high as admin permissions. This should NOT be shortened to \"owner\" to avoid confusion with other definitions in this document.\r\n\r\n----\r\n\r\nFrom https://github.com/turt2live/ietf-mimi-terminology/pull/3/commits/558c5523afcef756b94af0170e2daf380a3c32c7",
+      "createdAt": "2023-06-29T16:41:41Z",
+      "updatedAt": "2023-06-29T16:41:41Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 10,
+      "id": "I_kwDOJRNLIs5qsR5G",
+      "title": "Is it a \"Server-Server API\" or \"Server-Server Protocol\"?",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/issues/10",
+      "state": "CLOSED",
+      "author": "turt2live",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Same applies for Client-Server API.",
+      "createdAt": "2023-07-05T17:30:13Z",
+      "updatedAt": "2023-07-06T06:19:31Z",
+      "closedAt": "2023-07-06T06:19:31Z",
+      "comments": [
+        {
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "body": "having thought about it: it's both, depending on context.",
+          "createdAt": "2023-07-05T20:12:40Z",
+          "updatedAt": "2023-07-05T20:12:40Z"
+        }
+      ]
+    }
+  ],
+  "pulls": [
+    {
+      "number": 3,
+      "id": "PR_kwDOJRNLIs5UMYIx",
+      "title": "Define \"hub server\"",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/pull/3",
+      "state": "MERGED",
+      "author": "turt2live",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixes https://github.com/turt2live/ietf-mimi-terminology/issues/2",
+      "createdAt": "2023-06-28T23:38:33Z",
+      "updatedAt": "2023-06-29T16:42:14Z",
+      "baseRepository": "turt2live/ietf-mimi-terminology",
+      "baseRefName": "main",
+      "baseRefOid": "3e7a4ecbed11c130630f676056466f738a64a1f5",
+      "headRepository": "turt2live/ietf-mimi-terminology",
+      "headRefName": "travis/owners",
+      "headRefOid": "fd9ce0f4717843a6237b6d5e1a0ccfbfa747ef6f",
+      "closedAt": "2023-06-29T16:42:11Z",
+      "mergedAt": "2023-06-29T16:42:11Z",
+      "mergedBy": "turt2live",
+      "mergeCommit": {
+        "oid": "ee8bbde350a067b34510be2b2182786c13678556"
+      },
+      "comments": [
+        {
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "body": "@coopdanger please take a look - these definitions are potentially controversial in nature ",
+          "createdAt": "2023-06-28T23:43:14Z",
+          "updatedAt": "2023-06-28T23:43:14Z"
+        },
+        {
+          "author": "coopdanger",
+          "authorAssociation": "NONE",
+          "body": "As I've thought about this, I wonder if at this point we need only the definition of hub server. Are you using the server owner and server operator definitions anywhere? If not, I think defining them creates confusion and we can avoid it by not defining them.\r\n\r\nRegarding owning server, I think we can defer trying to write a definition until we've had a detailed discussion about how the authorization policy for a chat is going to be decided between the participating providers and their servers. ",
+          "createdAt": "2023-06-29T15:19:10Z",
+          "updatedAt": "2023-06-29T15:19:10Z"
+        },
+        {
+          "author": "coopdanger",
+          "authorAssociation": "NONE",
+          "body": "Also does this imply that the protocol needs to support cases where there is no hub server? Because I thought we had pretty good agreement that there would always be a hub server.",
+          "createdAt": "2023-06-29T15:22:34Z",
+          "updatedAt": "2023-06-29T15:22:34Z"
+        },
+        {
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "body": "> As I've thought about this, I wonder if at this point we need only the definition of hub server. Are you using the server owner and server operator definitions anywhere? If not, I think defining them creates confusion and we can avoid it by not defining them.\r\n\r\nI don't think we're using them anywhere, and I did consider not writing definitions for them. It felt a bit awkward to say \"don't shorten this to 'owner' because of undefined terms\", but we might be able to get around that for now.\r\n\r\n\r\n\r\n> Regarding owning server, I think we can defer trying to write a definition until we've had a detailed discussion about how the authorization policy for a chat is going to be decided between the participating providers and their servers.\r\n\r\nfair, will remove it for now.\r\n\r\n\r\n> Also does this imply that the protocol needs to support cases where there is no hub server? Because I thought we had pretty good agreement that there would always be a hub server.\r\n\r\nThis document was drafted when we didn't have consensus on design, yea. I'll add some words to fix that up in this PR.",
+          "createdAt": "2023-06-29T16:22:12Z",
+          "updatedAt": "2023-06-29T16:22:12Z"
+        },
+        {
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "body": "@coopdanger I think this looks better now? I'll open issues for the definitions I removed from this PR so we have a base to work from if needed.",
+          "createdAt": "2023-06-29T16:36:58Z",
+          "updatedAt": "2023-06-29T16:36:58Z"
+        },
+        {
+          "author": "coopdanger",
+          "authorAssociation": "NONE",
+          "body": "\ud83d\udc4d ",
+          "createdAt": "2023-06-29T16:40:54Z",
+          "updatedAt": "2023-06-29T16:40:54Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOJRNLIs5ZqvjN",
+          "commit": {
+            "abbreviatedOid": "558c552"
+          },
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-06-28T23:41:38Z",
+          "updatedAt": "2023-06-28T23:41:38Z",
+          "comments": [
+            {
+              "originalPosition": 20,
+              "body": "It's fairly unlikely that hosting providers for MIMI implementations/transports will sprout up (it just doesn't make sense), but it feels distinct enough from server owners to be worth writing down.",
+              "createdAt": "2023-06-28T23:41:38Z",
+              "updatedAt": "2023-06-28T23:41:38Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOJRNLIs5UMdFp",
+      "title": "Remove incorrect description of MLS distribution service",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/pull/4",
+      "state": "MERGED",
+      "author": "rohan-wire",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The definition Server had an incorrect statement about the MLS Distribution Service (DS). It is unnecessary. The MLS DS in the MIMI context includes the Servers of **all** the providers in an chat/MLS group and **part of all the clients**.",
+      "createdAt": "2023-06-29T00:16:06Z",
+      "updatedAt": "2023-06-30T18:28:30Z",
+      "baseRepository": "turt2live/ietf-mimi-terminology",
+      "baseRefName": "main",
+      "baseRefOid": "3e7a4ecbed11c130630f676056466f738a64a1f5",
+      "headRepository": "rohan-wire/ietf-mimi-terminology",
+      "headRefName": "patch-1",
+      "headRefOid": "1c036eb97f0e0417b34e9fef451482a8d27e5c22",
+      "closedAt": "2023-06-30T16:04:07Z",
+      "mergedAt": "2023-06-30T16:04:07Z",
+      "mergedBy": "turt2live",
+      "mergeCommit": {
+        "oid": "fede4130267041d2b0dfac87cb1459d4d3f9a334"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOJRNLIs5Zv2kk",
+          "commit": {
+            "abbreviatedOid": "bc05df7"
+          },
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-06-29T16:45:58Z",
+          "updatedAt": "2023-06-29T16:45:59Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "the diff is just slightly too narrow for me to suggest a diff, but I think it'd be good to clarify the DS somewhere in this document. We can also drop the p2p clause while we're here, given MIMI has largely agreed that it's not a thing the WG wants to pursue.\r\n\r\nSuggested definition would be:\r\n\r\n> **Server**: Responsible for routing events to other servers and local clients. The collection \r\n> of servers and clients in a chat form the MLS Delivery Service (DS).",
+              "createdAt": "2023-06-29T16:45:58Z",
+              "updatedAt": "2023-06-29T16:45:59Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOJRNLIs5Zxbmx",
+          "commit": {
+            "abbreviatedOid": "bc05df7"
+          },
+          "author": "rohan-wire",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-06-29T21:04:07Z",
+          "updatedAt": "2023-06-29T21:04:08Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "I don't object to your rewording, but in general I find the DS term to be so unhelpful and counterintuitive that I prefer to only mention it only briefly in the transport protocol and ignore everywhere else. ",
+              "createdAt": "2023-06-29T21:04:08Z",
+              "updatedAt": "2023-06-29T21:04:08Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOJRNLIs5Zxmi5",
+          "commit": {
+            "abbreviatedOid": "bc05df7"
+          },
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-06-29T21:43:34Z",
+          "updatedAt": "2023-06-29T21:43:34Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Fair. We should move the DS definition to the working group's transport document when it has one.",
+              "createdAt": "2023-06-29T21:43:34Z",
+              "updatedAt": "2023-06-29T21:43:34Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "id": "PR_kwDOJRNLIs5VGhjx",
+      "title": "Add \"owning server\"",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/pull/11",
+      "state": "MERGED",
+      "author": "turt2live",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixes https://github.com/turt2live/ietf-mimi-terminology/issues/6\r\n\r\n[Rendered: HTML](https://turt2live.github.io/ietf-mimi-terminology/travis/owning-server/draft-ralston-mimi-terminology.html)\r\n[Rendered: plain text](https://turt2live.github.io/ietf-mimi-terminology/travis/owning-server/draft-ralston-mimi-terminology.txt)",
+      "createdAt": "2023-07-10T15:49:25Z",
+      "updatedAt": "2023-07-10T16:40:53Z",
+      "baseRepository": "turt2live/ietf-mimi-terminology",
+      "baseRefName": "main",
+      "baseRefOid": "fede4130267041d2b0dfac87cb1459d4d3f9a334",
+      "headRepository": "turt2live/ietf-mimi-terminology",
+      "headRefName": "travis/owning-server",
+      "headRefOid": "4250d79277547801bf67e0554e576268b7f7cabb",
+      "closedAt": "2023-07-10T16:40:50Z",
+      "mergedAt": "2023-07-10T16:40:50Z",
+      "mergedBy": "turt2live",
+      "mergeCommit": {
+        "oid": "f67c23331d0329431eb3e39b291c069222939fe5"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
