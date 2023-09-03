@@ -60,6 +60,8 @@ described in this document or from MLS.
 
 # Terminology
 
+**TODO(TR): How much of this is replaced by {{?I-D.barnes-mimi-arch}}?**
+
 MIMI defines:
 
 **Messaging Provider** or **Provider**: A service offering instant messaging to users.
