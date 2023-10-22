@@ -75,72 +75,70 @@ In some cases, the user identity can be synonymous with the user ID, however the
 assumption if not clarified is that they are different concepts.
 
 **Client**: A user interface for messaging, performing encryption as needed. Presents
-chats to the user to interact with. Synonymous with MLS Client. Clients have a
+rooms to the user to interact with. Synonymous with MLS Client. Clients have a
 **Client ID** to canonically identify them among a user's other clients. Clients
 can additionally be called **Devices** to differentiate them from a named application.
 
-**Chat**: The place where users communicate. This is semantically distinct from an
-MLS Group: an MLS Group is responsible for handling client keys while a chat is
-simply the user-facing construct for communication, however systems can declare a chat
-to be the same as an MLS Group depending on their design. Chats have a **Chat ID** to
-canonically identify them within the system. Chats can additionally be called **Rooms**,
+**Room**: The place where users communicate. This is semantically distinct from an
+MLS Group: an MLS Group is responsible for handling client keys while a room is
+simply the user-facing construct for communication, however systems can declare a Room
+to be the same as an MLS Group depending on their design. Rooms have a **Room ID** to
+canonically identify them within the system. Rooms can additionally be called **Chats**,
 **Conversations**, and **Channels**.
 
-A chat can have any one of many different characterizations/behaviours, called **Chat Types**:
+A room can have any one of many different characterizations/behaviours, called **Room Types**:
 
-* **DM**: A direct message chat between exactly two users. DMs are typically created
-  when a user searches for another user to message, rather than creating a group chat.
-  All users in the chat have the same permission capabilities under the access control
-  semantics. The chat name is that of the opponent user in the DM. DMs are typically
-  canonical: exactly one chat with the opponent user exists at a time.
+* **DM**: A direct message room between exactly two users. DMs are typically created
+  when a user searches for another user to message, rather than creating a group Room.
+  All users in the room have the same permission capabilities under the access control
+  semantics. The room name is that of the other user in the DM. DMs are typically
+  canonical: exactly one Room with the other user exists at a time.
 
-* **Group DM**: A subtype of DMs where there are more than two users. The chat name
-  consists of the opponent users in the DM. Inherited from DMs, Group DMs are also
+* **Group DM**: A subtype of DMs where there are more than two users. The room name
+  consists of the other users in the DM. Inherited from DMs, Group DMs are also
   canonical: creating a new Group DM with the exact same users ultimately redirects to
-  the existing chat instead of creating a new one. These may also be called **Ad-hoc Chats**
+  the existing room instead of creating a new one. These may also be called **Ad-hoc Rooms**
   in some scenarios.
 
-* **Group Chat**: A chat which requires an invite to be able to participate, and can have
-  zero or more users. A user-provided chat name is defined for the chat. Typically,
+* **Group Chat**: A room which requires an invite to be able to participate, and can have
+  zero or more users. A user-provided room name is defined for the room. Typically,
   the creator has admin permissions while other designated users have either admin permissions
   or moderator permissions. Most users have default permissions which allow them to send
-  events to the chat. Unlike (Group) DMs, multiple chats with the same set of users
-  can exist at the same time, even with the same chat name.
+  events to the room. Unlike (Group) DMs, multiple rooms with the same set of users
+  can exist at the same time, even with the same room name.
 
-* **Public Chat**: A group chat which does not require an invite to participate. Usually
-  these types of chats are discovered through a directory or website. Chats which require
-  a request to join, or knock, are considered public chats. Sometimes these will be referred
+* **Public Room**: A group chat which does not require an invite to participate. Usually
+  these types of rooms are discovered through a directory or website. Rooms which require
+  a request to join, or knock, are considered public rooms. Sometimes these will be referred
   to as **Public Chatrooms**.
 
-* **Auditorium Chat**: Either a group chat or public chat where most users are unable to
-  send events and cannot be seen as chat members by other users. When an event is sent,
-  it may appear to be sent by the chat itself rather than the specific user who sent it.
-  Sometimes these are called **Auditorium Rooms**.
+* **Auditorium Room**: Either a group chat or public room where most users are unable to
+  send events and cannot be seen as room participants by other users. When an event is sent,
+  it may appear to be sent by the room itself rather than the specific user who sent it.
+  Sometimes these are called **Auditorium Chats**.
 
-Depending on the system, a chat's type can be mutable. For example, a user may be permitted
-to introduce new users to a group DM to implicitly convert it to a group chat, or they
-simply may be unable to implicitly or explicity change the chat type.
+Depending on the system, a room's type can be mutable. For example, a user may be permitted
+to introduce new users to a group DM to implicitly convert it to a group room, or they
+simply may be unable to implicitly or explicity change the room type.
 
-**Opponent Users**: From the perspective of a client, the users other than the current
-user in a chat. Typically, the current user of a client will be the one which is logged
-in (and if a client supports multiple accounts, the active session within that client
-instead).
+**Room Name**: The title or human-focused textually distinguishing factor for the room. It
+may be automatically generated based on the room participants.
 
-**Chat Name**: The title or human-focused textually distinguishing factor for the chat. It
-may be automatically generated based on the chat members.
+**Room Avatar**: A picture or graphic associated with the room, usually in combination with
+a room name. Room avatars can be automatically generated based on the room participants.
 
-**Chat Avatar**: A picture or graphic associated with the chat, usually in combination with
-a chat name. Chat avatars can be automatically generated based on the chat members.
-
-**Chat Member**: A joined user in the chat. Note that this may have implications on the
+**Room Participant**: A joined user in the room. Note that this may have implications on the
 associated MLS Members in the MLS Group for the user's devices.
+
+**Roster**: Typically, a list of users actively participating in the room (who have at least
+one MLS client in the corresponding MLS group.
 
 **Event**: The container for an encrypted MLS Message, sent over the wire between servers
 and clients (through their local servers). Events have an **Event ID** to canonically
-identify them at least within the chat.
+identify them at least within the room.
 
-**Chat Property**: Information stored in the chat, such as the name, topic, avatar, chat members,
-etc. This may be in the shape of an event. Note that chat properties are different from
+**Room Property**: Information stored in the room, such as the name, topic, avatar, room participants,
+etc. This may be in the shape of an event. Note that room properties are different from
 what is needed to construct an MLS Group Context.
 
 **Message**: Synonymous with an MLS Message. Messages have a **Message ID** to canonically
@@ -148,13 +146,13 @@ identify them at least within the group. These are essentially what a user would
 "message", though specifically the unencrypted portion. When encrypted, they are called events.
 
 **Server**: Responsible for routing events to other servers and local clients. The collection
-of servers and clients in a chat form the MLS Delivery Service (DS).
+of servers and clients in a room form the MLS Delivery Service (DS).
 
 **Hub Server**: The specific server responsible for routing events to other servers in the
-context of a chat. Sometimes this is shortened to **Hub**.
+context of a room. Sometimes this is shortened to **Hub**.
 
 **Owning Server**: If applicable, the server specifically responsible for applying access
-control to a chat. Typically, this will also be the hub server for the room. This should *not*
+control to a room. Typically, this will also be the hub server for the room. This should *not*
 be shortened to "owner" to avoid confusion with other related concepts.
 
 **Client-Server API**: The interface between a client and server. This may be nothing more
@@ -165,52 +163,52 @@ than a function call if the client and server are the same logical entity.
 **Transport**: The method and format for moving information between entities. For example,
 a Client-Server API might describe HTTPS and JSON as its transport. For added clarity,
 documents should clarify which API surface they are defining a transport for ("Server-Server
-Transport", for example).
+Transport", for example). MIMI is not chartered to define the Client-Server Transport.
 
 **Message Format**: The specific format that clients use within the encrypted body of an
 MLS Message. Sometimes this will also be called the **Content Format**.
 
 **Access Control**: The set of algorithms which determine whether an event or MLS Message
-is permitted in the chat/group. For instance, this may define whether an MLS Proposal
-is accepted or whether the user is able to become a chat member.
+is permitted in the room/group. For instance, this may define whether an MLS Proposal
+is accepted or whether the user is able to become a room participant.
 
-**Admin Permissions**: Typically at least the user who created the chat, these permissions
-grant the associated users an ability to change the permissions of other users in the chat.
-The set of users with these permissions in a chat are called **Admins**. Admin permissions
-inherit moderator permissions.
+**Admin Permissions**: Typically at least the user who created the room, these permissions
+grant the associated users an ability to change the permissions of other users in the room.
+The set of users with these permissions in a room are called **Admins**. Admin permissions
+typically inherit moderator permissions.
 
 **Moderator Permissions**: These permissions grant the associated users an ability to kick,
-ban, or otherwise restrict another user's ability to use the chat. For example, deleting
-a spammer's events. The set of users with these permissions in a chat are called **Moderators**.
+ban, or otherwise restrict another user's ability to use the room. For example, deleting
+a spammer's events. The set of users with these permissions in a room are called **Moderators**.
 
 Note that with both moderator permissions and admin permissions a system may have finer
 granularity, such as a set of users being able to kick but not ban. Documents with these
 semantics should clarify this case.
 
-**Invite**: An action taken by a user in a chat to encourage another user to become a
-chat member (or joined to the chat). This can be explicit through the server-server API,
-or implicit with an invite link/join code.
+**Invite**: An action taken by a user in a room to encourage another user to become a
+room participant (or joined to the room). This can be explicit through the server-server API,
+or implicit with an join link/join code.
 
-**Invite Link**: An out-of-band invite for a user to join the chat, represented as a URL
+**Join Link**: A machine-readable mechanism for a user to join the room, represented as a URL
 or QR code.
 
-**Join Code** or **Join Password**: A text-based string a user may enter to join a chat.
+**Join Code** or **Join Password**: A text-based string a user may enter to join a room.
 The string may be shared with the user verbatim or encoded with a QR code, for example.
 
 **Direct Invite**: An invite to a DM or Group DM. These invites might appear in a different
 section of the client's UI to denote their semantic difference from a non-DM invite.
 
-**Kick**: An action taken by a user in a chat to remove another user, assuming the sender
-has moderator permissions. The affected user can re-join the chat with either another invite
-or by simply joining, depending on the chat type.
+**Kick**: An action taken by a user to remove another user from a room, assuming the sender
+has moderator permissions. The affected user can re-join the room with either another invite
+or by simply joining, depending on the room type.
 
 **Ban**: Similar to kicking, a user is kicked from the room and not allowed to re-join
 until unbanned by a moderator. If a user is banned, they are typically not able to
-knock to get back into the chat either.
+knock to get back into the room either.
 
-**Knock**: A request from a user (who is not currently a chat member) to participate in the
-chat. Upon acceptance, the requesting user may receive an invite or be directly joined to
-the chat. Upon rejection, the requesting user can be banned or otherwise declined.
+**Knock**: A request from a user (who is not currently a room participant) to join the
+room. Upon acceptance, the requesting user may receive an invite or be directly joined to
+the room. Upon rejection, the requesting user can be banned or otherwise declined.
 
 **Status**: Temporarily displayed text or images associated with a user's profile. Instagram
 Stories are an example of a user's status.
