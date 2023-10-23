@@ -130,8 +130,6 @@ a room name. Room avatars can be automatically generated based on the room parti
 **Room Participant**: A joined user in the room. Note that this may have implications on the
 associated MLS Members in the MLS Group for the user's devices.
 
-**Roster**: Typically, a list of users actively participating in the room (who have at least
-one MLS client in the corresponding MLS group.
 
 **Event**: The container for an encrypted MLS Message, sent over the wire between servers
 and clients (through their local servers). Events have an **Event ID** to canonically
