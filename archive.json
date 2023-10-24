@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-07-11T00:03:39.004952+00:00",
+  "timestamp": "2023-10-24T00:03:13.000786+00:00",
   "repo": "turt2live/ietf-mimi-terminology",
   "labels": [
     {
@@ -434,6 +434,134 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 12,
+      "id": "PR_kwDOJRNLIs5deV2-",
+      "title": "Update terms decided in design team",
+      "url": "https://github.com/turt2live/ietf-mimi-terminology/pull/12",
+      "state": "MERGED",
+      "author": "rohan-wire",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Discussed in design team:\r\n- Chat -> Room\r\n- room members -> room participants\r\n- Invite link -> join link. Clarified that a join link is machine-readable way to join. Retained Invite for the overall desired action.\r\n\r\nRohan just trying to make things clearer:\r\n- Removed Opponent User (referred to \"other users\")\r\n\r\n- I also made a small change to the definition of Kick, to preserve the ability for a moderator to do rude things even if they are not an active participant in the room.",
+      "createdAt": "2023-10-22T23:31:07Z",
+      "updatedAt": "2023-10-23T19:29:11Z",
+      "baseRepository": "turt2live/ietf-mimi-terminology",
+      "baseRefName": "main",
+      "baseRefOid": "3b6b370ad7da630227893b92673f50bc87cc7bb9",
+      "headRepository": "rohan-wire/ietf-mimi-terminology",
+      "headRefName": "patch-1",
+      "headRefOid": "39d3248921f16346712e41127a24fd5fb56339bc",
+      "closedAt": "2023-10-23T19:29:11Z",
+      "mergedAt": "2023-10-23T19:29:11Z",
+      "mergedBy": "turt2live",
+      "mergeCommit": {
+        "oid": "63a779f022d67dfb01045c0eead60f6657b828b1"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOJRNLIs5k6EsK",
+          "commit": {
+            "abbreviatedOid": "e8475df"
+          },
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "state": "CHANGES_REQUESTED",
+          "body": "otherwise this looks good to me - thanks!",
+          "createdAt": "2023-10-23T16:00:43Z",
+          "updatedAt": "2023-10-23T16:10:17Z",
+          "comments": [
+            {
+              "originalPosition": 99,
+              "body": "we don't have consensus on \"roster\", but instead have elected to never use the word.",
+              "createdAt": "2023-10-23T16:00:43Z",
+              "updatedAt": "2023-10-23T16:10:17Z"
+            },
+            {
+              "originalPosition": 188,
+              "body": "I don't think we have consensus on out-of-band policy interactions, so would defer to leaving this as-is for now. Possibly adding a TODO to denote it's fluid nature.",
+              "createdAt": "2023-10-23T16:04:08Z",
+              "updatedAt": "2023-10-23T16:10:17Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOJRNLIs5k7oQR",
+          "commit": {
+            "abbreviatedOid": "e8475df"
+          },
+          "author": "rohan-wire",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-10-23T19:07:31Z",
+          "updatedAt": "2023-10-23T19:07:32Z",
+          "comments": [
+            {
+              "originalPosition": 99,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2023-10-23T19:07:31Z",
+              "updatedAt": "2023-10-23T19:07:32Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOJRNLIs5k7p7S",
+          "commit": {
+            "abbreviatedOid": "39d3248"
+          },
+          "author": "rohan-wire",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-10-23T19:11:31Z",
+          "updatedAt": "2023-10-23T19:11:32Z",
+          "comments": [
+            {
+              "originalPosition": 188,
+              "body": "Your wording explicitly rules it out of scope, whereas my proposed wording allow us to defer such a decision.",
+              "createdAt": "2023-10-23T19:11:32Z",
+              "updatedAt": "2023-10-23T19:11:32Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOJRNLIs5k7vxN",
+          "commit": {
+            "abbreviatedOid": "e8475df"
+          },
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-10-23T19:28:29Z",
+          "updatedAt": "2023-10-23T19:28:29Z",
+          "comments": [
+            {
+              "originalPosition": 188,
+              "body": "Ah, got confused by github's syntax highlighting, sorry!",
+              "createdAt": "2023-10-23T19:28:29Z",
+              "updatedAt": "2023-10-23T19:28:30Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOJRNLIs5k7v7q",
+          "commit": {
+            "abbreviatedOid": "39d3248"
+          },
+          "author": "turt2live",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-10-23T19:28:58Z",
+          "updatedAt": "2023-10-23T19:28:58Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
